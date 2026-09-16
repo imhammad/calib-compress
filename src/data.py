@@ -155,3 +155,90 @@ if __name__ == "__main__":
 
     print(f"  {len(STANDARD_CORRUPTIONS)} standard corruptions configured")
     print("CIFAR-10-C loader OK.")
+
+
+# ---------------------------------------------------------------------------
+# STL-10 -> CIFAR-10 9-class cross-domain shift
+#
+# Downloaded via torchvision from the official Stanford source to
+# data_cache/stl10/. STL-10 test split: 8000 images, 96x96, 10 balanced
+# classes (800 each). STL-10's class order (confirmed empirically,
+# see src/probe_stl10.py output) is:
+#   0 airplane, 1 bird, 2 car, 3 cat, 4 deer, 5 dog,
+#   6 horse, 7 monkey, 8 ship, 9 truck
+#
+# CIFAR-10's class order (from the HF uoft-cs/cifar10 loading script) is:
+#   0 airplane, 1 automobile, 2 bird, 3 cat, 4 deer, 5 dog,
+#   6 frog, 7 horse, 8 ship, 9 truck
+#
+# 9 classes overlap. STL's "monkey" has no CIFAR equivalent and is
+# DROPPED from this dataset entirely (not remapped to anything).
+# CIFAR's "frog" has no STL equivalent -- there is nothing to do about
+# that here; it is handled at evaluation time by masking logit index 6
+# out of the softmax before computing predictions, so the model is
+# never penalised for not predicting a class STL-10 cannot contain.
+# ---------------------------------------------------------------------------
+
+STL_TO_CIFAR = {
+    0: 0,  # airplane  -> airplane
+    1: 2,  # bird      -> bird
+    2: 1,  # car       -> automobile
+    3: 3,  # cat       -> cat
+    4: 4,  # deer      -> deer
+    5: 5,  # dog       -> dog
+    6: 7,  # horse     -> horse
+    # 7 (monkey) intentionally absent -- dropped, not mapped
+    8: 8,  # ship      -> ship
+    9: 9,  # truck     -> truck
+}
+
+CIFAR_CLASSES_MISSING_FROM_STL = [6]  # frog -- mask this logit at eval time
+
+STL_EVAL_TRANSFORM = T.Compose([
+    T.Resize((32, 32)),
+    T.ToTensor(),
+    T.Normalize(CIFAR_MEAN, CIFAR_STD),
+])
+
+
+class STL9(Dataset):
+    """STL-10 test set, remapped to CIFAR-10 label space, monkey dropped."""
+
+    def __init__(self, transform=None, root="data_cache/stl10"):
+        import torchvision
+        raw = torchvision.datasets.STL10(root=root, split="test", download=True)
+
+        self.samples = []  # list of (index_into_raw, cifar_label)
+        for i, stl_label in enumerate(raw.labels.tolist()):
+            if stl_label in STL_TO_CIFAR:
+                self.samples.append((i, STL_TO_CIFAR[stl_label]))
+
+        self.raw = raw
+        self.transform = transform or STL_EVAL_TRANSFORM
+
+    def __len__(self):
+        return len(self.samples)
+
+    def __getitem__(self, idx):
+        raw_idx, cifar_label = self.samples[idx]
+        img, _ = self.raw[raw_idx]  # PIL image, discard original STL label
+        if self.transform:
+            img = self.transform(img)
+        return img, cifar_label
+
+
+if __name__ == "__main__":
+    print("\n--- STL-9 check ---")
+    stl = STL9()
+    print(f"  len = {len(stl)}  (expect 7200 = 8000 - 800 dropped monkeys)")
+
+    img, label = stl[0]
+    print(f"  sample image shape: {tuple(img.shape)}, remapped label: {label}")
+
+    from collections import Counter
+    label_counts = Counter(c for _, c in stl.samples)
+    print(f"  distinct CIFAR labels present: {sorted(label_counts.keys())}")
+    print(f"  label 6 (frog) present? {6 in label_counts}  (should be False)")
+    print(f"  per-label counts: {dict(sorted(label_counts.items()))}")
+
+    print("STL-9 loader OK.")
