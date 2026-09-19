@@ -61,3 +61,33 @@ val acc). 20 epochs of fine-tuning fully repairs accuracy at every
 sparsity level tested. Whether calibration (ECE) shows the same
 flatness, or reveals damage that accuracy hides, is the open question
 for Phase 7.
+
+## Phase 3b: structured (channel) pruning via torch-pruning (ResNet-18)
+
+Channel ratio does NOT map linearly to parameter reduction (removing
+channels shrinks both a layer's output AND the next layer's input
+dimension, compounding the effect) -- reporting the REAL achieved
+parameter reduction, not the input channel ratio, to avoid a
+misleading comparison to unstructured pruning's sparsity numbers.
+
+| Channel ratio | Real param reduction | Seed | Pre-recovery val acc | Post-recovery test acc |
+|---|---|---|---|---|
+| 0.15 | 27.95% | 0 | 0.9046 | 0.9463 |
+| 0.15 | 27.95% | 1 | 0.9208 | 0.9408 |
+| 0.15 | 27.95% | 2 | 0.9218 | 0.9464 |
+| 0.30 | 51.14% | 0 | 0.5770 | 0.9453 |
+| 0.30 | 51.14% | 1 | 0.8172 | 0.9426 |
+| 0.30 | 51.14% | 2 | 0.7438 | 0.9448 |
+
+**Comparison across all Phase 3 arms:** dense 94.62% | denseft (control)
+94.68% | unstructured pruning (30-90%) 94.1-94.8% | structured pruning
+(28%/51% real reduction) 94.1-94.6%. Post-recovery accuracy is
+essentially indistinguishable across every compression method and
+severity tested. Real damage before recovery scales with severity as
+expected (structured hits harder than unstructured at comparable
+parameter reduction, consistent with channel removal being a coarser
+operation than individual-weight zeroing), but 20 epochs of
+fine-tuning erases the difference every time. This makes the Phase 7
+calibration question -- does ECE show the same flatness, or does it
+reveal damage accuracy hides -- the central open question of the
+paper.
