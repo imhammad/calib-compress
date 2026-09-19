@@ -30,3 +30,34 @@ move much here -- the real comparison is ECE, computed in Phase 7.
 
 Comparison: dense 94.62% ± 0.28% vs. denseft 94.68% ± 0.27% -- no
 meaningful accuracy shift from fine-tuning alone, as expected.
+
+## Phase 3: unstructured global magnitude pruning (ResNet-18)
+
+Pruned from each dense seed's checkpoint, then fine-tuned for 20
+epochs using the identical recovery schedule as the Phase 2 control.
+"Pre-recovery" is the model's accuracy immediately after pruning,
+before any fine-tuning -- this is the real measure of how much damage
+pruning did on its own.
+
+| Sparsity | Seed | Pre-recovery val acc | Post-recovery test acc |
+|---|---|---|---|
+| 30% | 0 | 0.9502 | 0.9472 |
+| 30% | 1 | 0.9470 | 0.9431 |
+| 30% | 2 | 0.9528 | 0.9459 |
+| 50% | 0 | 0.9476 | 0.9471 |
+| 50% | 1 | 0.9452 | 0.9423 |
+| 50% | 2 | 0.9508 | 0.9477 |
+| 70% | 0 | 0.9254 | 0.9477 |
+| 70% | 1 | 0.9182 | 0.9431 |
+| 70% | 2 | 0.9306 | 0.9444 |
+| 90% | 0 | 0.2134 | 0.9473 |
+| 90% | 1 | 0.1766 | 0.9413 |
+| 90% | 2 | 0.3330 | 0.9449 |
+
+**Key finding:** post-recovery test accuracy is essentially flat
+across the entire sparsity range (94.1-94.8%), even though 90%
+sparsity causes catastrophic pre-recovery damage (as low as 17.7%
+val acc). 20 epochs of fine-tuning fully repairs accuracy at every
+sparsity level tested. Whether calibration (ECE) shows the same
+flatness, or reveals damage that accuracy hides, is the open question
+for Phase 7.
