@@ -56,6 +56,24 @@ def apply_structured_pruning(model, sparsity, example_input):
     return model
 
 
+def rebuild_pruned_skeleton(dense_ckpt_path, arch_builder, sparsity, device):
+    """
+    Reconstructs a correctly-shaped pruned model skeleton by re-running
+    the same deterministic structured pruning starting from the same
+    dense checkpoint. Structured pruning changes real layer shapes, so
+    a plain freshly-built full-size model can not load_state_dict() a
+    pruned checkpoint directly -- this rebuilds the right shape first.
+    Returns an uninitialized-weights model with the CORRECT shapes,
+    ready to have the real trained state_dict loaded into it.
+    """
+    skeleton = arch_builder().to(device)
+    dense_ckpt = torch.load(dense_ckpt_path, map_location=device)
+    skeleton.load_state_dict(dense_ckpt["model_state_dict"])
+    example_input = torch.randn(1, 3, 32, 32).to(device)
+    skeleton = apply_structured_pruning(skeleton, sparsity, example_input)
+    return skeleton
+
+
 def count_params(model):
     return sum(p.numel() for p in model.parameters())
 
