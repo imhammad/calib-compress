@@ -125,3 +125,29 @@ complete for ResNet-18/ResNet-10 -- 27 real, verified checkpoints
 total. Remaining before calibration analysis: Phase 4 (quantization,
 INT8 PTQ + simulated low-bit) and Phase 6 (dump logits across all
 domains for every checkpoint).
+
+## Phase 4: INT8 static post-training quantization (ResNet-18)
+
+One-shot conversion (no training/recovery). Calibrated on 1000 real
+training images. Required patching BasicBlock's residual `+=` to use
+`nn.quantized.FloatFunctional().add()` -- quantized tensors don't
+support the plain += operator (PyTorch's own documented limitation,
+same fix used in torchvision's official quantizable ResNet). The
+patch has zero learnable parameters, so it's fully backward-compatible
+with every checkpoint already trained.
+
+| Seed | FP32 test acc | INT8 test acc | Delta | Checkpoint size |
+|---|---|---|---|---|
+| 0 | 0.9482 | 0.9478 | -0.0004 | 83MB -> 11.3MB |
+| 1 | 0.9430 | 0.9433 | +0.0003 | 83MB -> 11.3MB |
+| 2 | 0.9475 | 0.9476 | +0.0001 | 83MB -> 11.3MB |
+
+**Finding:** as anticipated, INT8 PTQ is essentially a null result for
+accuracy -- deltas are negligible in both directions across all 3
+seeds, while the model shrinks ~7.3x on disk. This is a genuine,
+useful finding, not a failure: it suggests INT8 is calibration-safe
+purely from the accuracy side. Whether ECE tells the same story (or
+whether accuracy hides a real calibration cost even here) is a Phase
+7 question, same as every other compression arm. Lower bit-widths
+(W4A8/W4A4, the Kuang & Wong regime where real degradation is
+expected) are a follow-up, not yet run.
