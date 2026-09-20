@@ -33,11 +33,18 @@ class BasicBlock(nn.Module):
                           stride=stride, bias=False),
                 nn.BatchNorm2d(planes * self.expansion),
             )
+        # FloatFunctional has zero learnable parameters -- adding it here
+        # does not change state_dict keys, so all existing checkpoints
+        # still load fine. In plain FP32 mode .add() behaves identically
+        # to +=. Only needed so quantization (torch.ao.quantization) can
+        # correctly insert a quantized-add op here -- plain += is not
+        # supported on quantized tensors.
+        self.skip_add = nn.quantized.FloatFunctional()
 
     def forward(self, x):
         out = self.relu(self.bn1(self.conv1(x)))
         out = self.bn2(self.conv2(out))
-        out += self.shortcut(x)
+        out = self.skip_add.add(out, self.shortcut(x))
         return self.relu(out)
 
 
