@@ -29,28 +29,28 @@ from prune_structured import rebuild_pruned_skeleton
 # Checkpoint manifest: every checkpoint we've trained, and how to load it.
 # ---------------------------------------------------------------------
 
-def build_manifest():
+def build_manifest(ckpt_dir="ckpt"):
     m = []
     seeds = [0, 1, 2]
 
     for s in seeds:
         m.append({"name": f"resnet18_dense_s{s}", "kind": "plain", "arch": "resnet18",
-                   "path": f"ckpt/resnet18_dense_s{s}.pt"})
+                   "path": f"{ckpt_dir}/resnet18_dense_s{s}.pt"})
         m.append({"name": f"resnet18_denseft_s{s}", "kind": "plain", "arch": "resnet18",
-                   "path": f"ckpt/resnet18_denseft_s{s}.pt"})
+                   "path": f"{ckpt_dir}/resnet18_denseft_s{s}.pt"})
         for sp in [30, 50, 70, 90]:
             m.append({"name": f"resnet18_unstr{sp}_s{s}", "kind": "plain", "arch": "resnet18",
-                       "path": f"ckpt/resnet18_unstr{sp}_s{s}.pt"})
+                       "path": f"{ckpt_dir}/resnet18_unstr{sp}_s{s}.pt"})
         for ratio_tag, ratio in [("15", 0.15), ("30", 0.30)]:
             m.append({"name": f"resnet18_str{ratio_tag}_s{s}", "kind": "structured", "arch": "resnet18",
-                       "path": f"ckpt/resnet18_str{ratio_tag}_s{s}.pt",
-                       "dense_ckpt": f"ckpt/resnet18_dense_s{s}.pt", "sparsity": ratio})
+                       "path": f"{ckpt_dir}/resnet18_str{ratio_tag}_s{s}.pt",
+                       "dense_ckpt": f"{ckpt_dir}/resnet18_dense_s{s}.pt", "sparsity": ratio})
         m.append({"name": f"resnet10_kd_s{s}", "kind": "plain", "arch": "resnet10",
-                   "path": f"ckpt/resnet10_kd_s{s}.pt"})
+                   "path": f"{ckpt_dir}/resnet10_kd_s{s}.pt"})
         m.append({"name": f"resnet10_scratch_s{s}", "kind": "plain", "arch": "resnet10",
-                   "path": f"ckpt/resnet10_scratch_s{s}.pt"})
+                   "path": f"{ckpt_dir}/resnet10_scratch_s{s}.pt"})
         m.append({"name": f"resnet18_int8_s{s}", "kind": "int8", "arch": "resnet18",
-                   "path": f"ckpt/resnet18_int8_s{s}.pt"})
+                   "path": f"{ckpt_dir}/resnet18_int8_s{s}.pt"})
 
     return {entry["name"]: entry for entry in m}
 
@@ -149,6 +149,8 @@ def main():
                     help="comma-separated checkpoint names, or 'all'")
     p.add_argument("--domains", required=True,
                     help="comma-separated domain names, or 'all'")
+    p.add_argument("--ckpt-dir", default="ckpt",
+                    help="directory containing checkpoints (local: ckpt, Kaggle: dataset mount path)")
     args = p.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
@@ -156,7 +158,7 @@ def main():
 
     os.makedirs("logits", exist_ok=True)
 
-    manifest = build_manifest()
+    manifest = build_manifest(ckpt_dir=args.ckpt_dir)
     all_domains = build_domain_list()
     print(f"Full manifest: {len(manifest)} checkpoints, {len(all_domains)} domains")
 
