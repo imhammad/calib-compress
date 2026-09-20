@@ -91,3 +91,37 @@ fine-tuning erases the difference every time. This makes the Phase 7
 calibration question -- does ECE show the same flatness, or does it
 reveal damage accuracy hides -- the central open question of the
 paper.
+
+## Phase 5: knowledge distillation (ResNet-18 teacher -> ResNet-10 student)
+
+Student trained with combined KD loss (T=2.0, alpha=0.7 soft/hard
+split). Control: identical ResNet-10 architecture trained from
+scratch, same 100-epoch schedule, no teacher -- isolates "KD helps"
+from "smaller models are inherently easier to fit/calibrate."
+
+| Arch | Seed | Test acc |
+|---|---|---|
+| ResNet-10 (KD) | 0 | 0.9433 |
+| ResNet-10 (KD) | 1 | 0.9429 |
+| ResNet-10 (KD) | 2 | 0.9421 |
+| **ResNet-10 (KD) mean ± std** | — | **0.9428 ± 0.0006** |
+| ResNet-10 (scratch) | 0 | 0.9401 |
+| ResNet-10 (scratch) | 1 | 0.9368 |
+| ResNet-10 (scratch) | 2 | 0.9393 |
+| **ResNet-10 (scratch) mean ± std** | — | **0.9387 ± 0.0017** |
+
+**Finding:** KD gives a small, consistent ~0.4 point accuracy edge
+over the scratch-trained control across all 3 seeds (no overlap) --
+directionally consistent with soft-target regularization effects
+reported in the KD literature. Whether this accuracy edge corresponds
+to a calibration edge, or whether KD's soft targets specifically
+improve calibration beyond what the accuracy gain would predict, is a
+Phase 7 question.
+
+## Status: all compression arms trained
+Dense baseline, fine-tuning control, unstructured pruning (4 ratios),
+structured pruning (2 ratios), KD, and scratch-KD-control are all
+complete for ResNet-18/ResNet-10 -- 27 real, verified checkpoints
+total. Remaining before calibration analysis: Phase 4 (quantization,
+INT8 PTQ + simulated low-bit) and Phase 6 (dump logits across all
+domains for every checkpoint).
