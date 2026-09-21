@@ -110,7 +110,8 @@ STANDARD_CORRUPTIONS = [
     "contrast", "elastic_transform", "pixelate", "jpeg_compression",
 ]
 
-C10C_ROOT = "data_cache/CIFAR-10-C"
+import os as _os
+C10C_ROOT = _os.environ.get("CIFAR10C_ROOT", "data_cache/CIFAR-10-C")
 
 
 class CIFAR10C(Dataset):
