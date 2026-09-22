@@ -23,6 +23,9 @@ from torch.utils.data import DataLoader
 from data import CIFAR10Test, CIFAR10C, STL9, STANDARD_CORRUPTIONS
 from models import resnet18_cifar, resnet10_cifar
 from prune_structured import rebuild_pruned_skeleton
+from quantize import build_int8_model
+from quantize import QuantWrapper  # needed so torch.load can find __main__.QuantWrapper
+                                     # when unpickling INT8 checkpoints saved by quantize.py
 
 
 # ---------------------------------------------------------------------
@@ -50,7 +53,7 @@ def build_manifest(ckpt_dir="ckpt"):
         m.append({"name": f"resnet10_scratch_s{s}", "kind": "plain", "arch": "resnet10",
                    "path": f"{ckpt_dir}/resnet10_scratch_s{s}.pt"})
         m.append({"name": f"resnet18_int8_s{s}", "kind": "int8", "arch": "resnet18",
-                   "path": f"{ckpt_dir}/resnet18_int8_s{s}.pt"})
+                   "dense_ckpt": f"{ckpt_dir}/resnet18_dense_s{s}.pt"})
 
     return {entry["name"]: entry for entry in m}
 
@@ -77,11 +80,13 @@ def load_model(entry, device):
         return model, device
 
     if entry["kind"] == "int8":
-        # Quantized models only run on CPU; the checkpoint stores the
-        # whole wrapped module object, not a state_dict.
-        ckpt = torch.load(entry["path"], map_location="cpu")
-        model = ckpt["model"]
-        model.eval()
+        # Rebuilt fresh from the dense checkpoint every time, rather than
+        # unpickling a saved quantized model object -- quantized PyTorch
+        # modules are fragile to serialize/reload across processes (we
+        # hit three separate pickle/engine bugs trying that route).
+        # Quantization calibration is deterministic given the same
+        # images, so this reconstruction is exactly reproducible.
+        model = build_int8_model(entry["dense_ckpt"])
         return model, "cpu"
 
     raise ValueError(f"unknown checkpoint kind: {entry['kind']}")

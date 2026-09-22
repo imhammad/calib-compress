@@ -45,6 +45,40 @@ def default_backend():
     return "qnnpack" if platform.machine() in ("arm64", "aarch64") else "fbgemm"
 
 
+def build_int8_model(dense_ckpt_path, calib_images=1000, backend=None):
+    """
+    Rebuilds an INT8-quantized model fresh from a dense checkpoint,
+    deterministically (same calibration images every time). Used
+    instead of unpickling a saved QuantWrapper object, which is
+    fragile across processes/PyTorch versions. Always runs on CPU.
+    Returns the ready-to-eval quantized model.
+    """
+    backend = backend or default_backend()
+    torch.backends.quantized.engine = backend
+
+    model = resnet18_cifar()
+    ckpt = torch.load(dense_ckpt_path, map_location="cpu")
+    model.load_state_dict(ckpt["model_state_dict"])
+    model.eval()
+
+    wrapped = QuantWrapper(model)
+    wrapped.eval()
+    wrapped.qconfig = get_default_qconfig(backend)
+    prepare(wrapped, inplace=True)
+
+    calib_ds = CIFAR10Subset("splits/cifar10_train_idx.npy", train=False, transform=EVAL_TRANSFORM)
+    calib_ds.images = calib_ds.images[:calib_images]
+    calib_ds.labels = calib_ds.labels[:calib_images]
+    calib_loader = DataLoader(calib_ds, batch_size=100, shuffle=False)
+    with torch.no_grad():
+        for images, _ in calib_loader:
+            wrapped(images)
+
+    convert(wrapped, inplace=True)
+    wrapped.eval()
+    return wrapped
+
+
 def evaluate_cpu(model, loader):
     model.eval()
     correct, total = 0, 0
