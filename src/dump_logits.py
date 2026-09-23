@@ -20,7 +20,7 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
-from data import CIFAR10Test, CIFAR10C, STL9, STANDARD_CORRUPTIONS
+from data import CIFAR10Test, CIFAR10Subset, EVAL_TRANSFORM, CIFAR10C, STL9, STANDARD_CORRUPTIONS
 from models import resnet18_cifar, resnet10_cifar
 from prune_structured import rebuild_pruned_skeleton
 from quantize import build_int8_model
@@ -97,7 +97,7 @@ def load_model(entry, device):
 # ---------------------------------------------------------------------
 
 def build_domain_list():
-    domains = ["cifar10_test", "stl9"]
+    domains = ["cifar10_val", "cifar10_test", "stl9"]
     for corruption in STANDARD_CORRUPTIONS:
         for severity in [1, 2, 3, 4, 5]:
             domains.append(f"cifar10c_{corruption}_sev{severity}")
@@ -105,6 +105,8 @@ def build_domain_list():
 
 
 def get_domain_dataset(domain_name):
+    if domain_name == "cifar10_val":
+        return CIFAR10Subset("splits/cifar10_val_idx.npy", train=False, transform=EVAL_TRANSFORM)
     if domain_name == "cifar10_test":
         return CIFAR10Test()
     if domain_name == "stl9":
