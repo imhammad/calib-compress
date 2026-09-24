@@ -151,3 +151,64 @@ whether accuracy hides a real calibration cost even here) is a Phase
 7 question, same as every other compression arm. Lower bit-widths
 (W4A8/W4A4, the Kuang & Wong regime where real degradation is
 expected) are a follow-up, not yet run.
+
+## Phase 7: calibration analysis (the headline result)
+
+Full results in results/calibration_results.csv (2541 rows: 33
+checkpoints x 76 evaluation domains, cifar10_test/stl9/cifar10c-corruptions,
+excludes cifar10_val which is used only to fit source_T).
+
+Method: for each checkpoint, temperature T fit two ways --
+"source-TS" (fit once on the held-out cifar10_val split, applied to
+every target domain -- the realistic, deployable case) and
+"oracle-TS" (fit directly on each target domain -- an unachievable
+upper bound used only to measure the transfer gap). transfer_gap =
+sourcets_ece - oraclets_ece, averaged across all 75 CIFAR-10-C
+corruption x severity conditions.
+
+| Method | Mean transfer gap (corruption domains) |
+|---|---|
+| resnet10 scratch | 0.0624 |
+| resnet18 unstr50 | 0.0724 |
+| resnet18 dense | 0.0727 |
+| resnet18 unstr70 | 0.0728 |
+| resnet18 int8 | 0.0731 |
+| resnet18 unstr30 | 0.0732 |
+| resnet18 str15 | 0.0734 |
+| resnet18 unstr90 | 0.0749 |
+| resnet18 denseft | 0.0751 |
+| resnet18 str30 | 0.0752 |
+| resnet10 kd | 0.0784 |
+
+**Finding 1 (robust, replicates across every arm):** source-domain
+temperature scaling recovers only about a third of the calibration
+improvement that's actually achievable (raw ECE ~0.18 -> source-TS
+~0.13 -> oracle-TS ~0.06, averaged across corruption domains). This
+holds regardless of compression method or severity -- a clean
+replication of Ovadia et al.'s domain-shift finding, now shown to
+hold under compression too.
+
+**Finding 2 (the strongest new result, seed-consistent):** KD vs. its
+scratch-trained control shows a robust, non-diminishing gap across
+all 3 seeds (+0.0122, +0.0178, +0.0180) -- despite KD having BETTER
+accuracy than scratch (94.28% vs 93.87%, see Phase 5), it has a
+~2x WORSE calibration transfer gap under shift. Real tension between
+accuracy and calibration-transfer that KD's soft-target regularization
+does not resolve and may actively worsen.
+
+**Finding 3 (a caveat, not a headline):** the fine-tuning-alone
+control (denseft vs dense) shows a small, seed-diminishing gap
+increase (+0.0044, +0.0027, +0.0003) -- real but weak, and shrinking
+across seeds. This means pruning-arm transfer-gap differences can't
+be cleanly attributed to pruning alone without this control; it also
+means the pruning arms' small differences from dense (unstr30-90:
+0.0724-0.0749) are within the range this confound alone could produce,
+so no strong pruning-severity effect on transfer gap can be claimed
+from this data.
+
+**Not yet done:** classwise ECE, adaptive ECE and NLL/Brier are
+already in the CSV per-row but not yet summarized; STL9 (cross-dataset
+shift) analyzed separately from CIFAR-10-C is still pending; per-
+corruption-type breakdown (does noise vs. blur vs. weather shift
+behave differently) not yet examined; no significance testing beyond
+n=3 seed consistency.
