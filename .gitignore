@@ -220,3 +220,4 @@ data_cache/
 ckpt/*.pt
 ckpt/*.pt
 .DS_Store
+logits/*.npz
