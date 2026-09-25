@@ -212,3 +212,28 @@ shift) analyzed separately from CIFAR-10-C is still pending; per-
 corruption-type breakdown (does noise vs. blur vs. weather shift
 behave differently) not yet examined; no significance testing beyond
 n=3 seed consistency.
+
+## Phase 7 follow-up: stress-testing Finding 2 (KD vs scratch)
+
+**STL9 (cross-dataset shift) replication:** KD vs scratch transfer
+gap difference holds in the same direction on STL9 as on CIFAR-10-C,
+across all 3 seeds (+0.0068, +0.0091, +0.0051) -- smaller absolute
+gap than CIFAR-10-C (STL9 is a milder shift overall for every method)
+but same sign, every seed. Confirms this is not a CIFAR-10-C-specific
+artifact.
+
+**Per-corruption-type breakdown (CIFAR-10-C, 15 corruption types):**
+KD has a WORSE transfer gap than scratch in 15/15 corruption types,
+zero exceptions. Effect is largest for noise-family corruptions
+(gaussian_noise +0.026, shot_noise +0.022) and smallest for brightness
+(+0.004), but the sign never flips. This is strong, general evidence
+-- not narrowly driven by one or two corruption types -- and supports
+stating Finding 2 as a general claim about domain shift, not a
+corruption-specific one.
+
+**denseft/STL9 note:** the fine-tuning-alone control's small gap
+increase seen on CIFAR-10-C does NOT replicate cleanly on STL9
+(+0.0027, +0.0012, -0.0033 -- sign flips at seed 2). Combined with
+CIFAR-10-C's own seed-diminishing pattern, this confirms Finding 3
+should remain scoped as a caveat/confound-check, not a claim -- unlike
+Finding 2 (KD), which is robust across both evaluation setups.
