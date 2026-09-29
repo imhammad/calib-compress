@@ -237,3 +237,27 @@ increase seen on CIFAR-10-C does NOT replicate cleanly on STL9
 CIFAR-10-C's own seed-diminishing pattern, this confirms Finding 3
 should remain scoped as a caveat/confound-check, not a claim -- unlike
 Finding 2 (KD), which is robust across both evaluation setups.
+
+## Phase 7 second follow-up: robustness across all five metrics
+
+Repeated the KD-vs-scratch and denseft-vs-dense paired comparisons on
+adaptive ECE, classwise ECE, NLL, and Brier, not just ECE.
+
+KD vs scratch: positive (KD worse) in all 3 seeds, on both CIFAR-10-C
+and STL-9, on all 5 metrics -- 15/15 checks positive, no exceptions.
+Note: KD's classwise-ECE transfer gap (0.0069) is no longer the single
+largest in the full 11-method table (unstr90 0.0075, denseft 0.0074
+are slightly higher) -- the paired claim against KD's own matched
+control still holds cleanly, but "KD is worse than every method" is
+not quite true for classwise ECE specifically, only "KD is worse than
+its own scratch control," which was always the actual claim.
+
+denseft vs dense: positive in all 3 seeds on CIFAR-10-C for ECE/aECE/
+cwECE, but flips sign at seed 2 for NLL and Brier even on CIFAR-10-C.
+On STL-9, flips sign at seed 2 for all 5 metrics. Further supports
+treating this strictly as a caveat, not a claim -- weaker and less
+consistent than previously shown with ECE alone.
+
+Correction: recovery fraction from raw to source-TS ECE is closer to
+~40%, not "about a third" (~33%) as stated in an earlier paper draft.
+Fixed in Calibration_DL.tex (Abstract, Results intro, Conclusion).
