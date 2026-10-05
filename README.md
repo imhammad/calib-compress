@@ -48,3 +48,7 @@ CIFAR-10 (via Hugging Face `uoft-cs/cifar10`), CIFAR-10-C (Hendrycks & Dietteric
 Zenodo record 2535967; set `CIFAR10C_ROOT` to its location), and STL-10 (torchvision).
 For STL-10 we keep the nine classes shared with CIFAR-10 and mask the CIFAR-only
 frog logit before the softmax.
+
+
+Training and logit extraction ran on Kaggle (T4 GPU); the pinned versions in
+requirements.txt are those used for the analysis.
