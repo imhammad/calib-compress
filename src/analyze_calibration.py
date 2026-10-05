@@ -4,8 +4,13 @@ computes raw + source-TS + oracle-TS metrics for every (checkpoint,
 domain) pair, and writes results/calibration_results.csv -- the single
 source of truth for every calibration number in the paper.
 
+STL-9 note: STL-10 has no "frog" class, so for the stl9 domain the frog
+logit (CIFAR-10 index 6) is masked out of the softmax before ANY metric
+is computed (raw, source-fit, and oracle-fit). The source temperature is
+still fit on the unmasked CIFAR-10 validation split, which is correct.
+
 Usage:
-    python3 src/analyze_calibration.py
+    python3 src/analyze_calibration.py --logits-dir logits
 """
 import glob
 import os
@@ -16,6 +21,8 @@ import pandas as pd
 
 from metrics import compute_all_metrics, fit_temperature, apply_temperature
 
+FROG_IDX = 6  # CIFAR-10 class with no STL-10 counterpart
+
 
 def parse_filename(path):
     """logits/<checkpoint_name>__<domain_name>.npz -> (checkpoint_name, domain_name)"""
@@ -25,7 +32,7 @@ def parse_filename(path):
 
 
 def classify_checkpoint(name):
-    """Extracts (arch, method, param, seed) from a checkpoint name for
+    """Extracts (arch, method, seed) from a checkpoint name for
     easy grouping/plotting later."""
     m = re.match(r"(resnet\d+)_([a-z0-9]+)_s(\d)$", name)
     arch, method, seed = m.group(1), m.group(2), int(m.group(3))
@@ -60,6 +67,13 @@ def main(logits_dir="logits"):
         for domain_name, (logits, labels) in domains.items():
             if domain_name == "cifar10_val":
                 continue  # val set itself is not a reported evaluation domain
+
+            # Mask the frog logit for STL-9 BEFORE computing any metric,
+            # so raw, source-fit, and oracle-fit all use the masked logits.
+            if domain_name == "stl9":
+                logits = logits.copy()
+                logits[:, FROG_IDX] = -1e4
+                assert not (labels == FROG_IDX).any(), "STL-9 should contain no frog labels"
 
             raw_metrics = compute_all_metrics(logits, labels)
 
