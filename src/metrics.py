@@ -6,8 +6,8 @@ arrays, EXCEPT where noted. Softmax is applied internally where needed
 -- callers never need to pre-normalize.
 """
 import numpy as np
-import torch
-import torch.nn.functional as F
+from scipy.optimize import minimize_scalar
+from scipy.special import logsumexp
 
 
 def softmax_np(logits):
@@ -113,22 +113,79 @@ def classwise_ece(logits, labels, n_classes=10, n_bins=15):
     return total / n_classes
 
 
-def fit_temperature(logits, labels, max_iter=200, lr=0.01):
+T_MIN, T_MAX = 0.05, 100.0
+
+
+def nll_at_temperature(logits, labels, T):
+    """Exact mean NLL of softmax(logits / T), in float64 via log-sum-exp.
+    This is the objective fit_temperature minimizes."""
+    z = np.asarray(logits, dtype=np.float64) / T
+    lse = logsumexp(z, axis=1)
+    return float((lse - z[np.arange(len(labels)), labels]).mean())
+
+
+def fit_temperature(logits, labels, t_min=T_MIN, t_max=T_MAX, xatol=1e-6):
     """
-    Fits a single scalar temperature T > 0 to minimize NLL, via L-BFGS,
-    following Guo et al. 2017. logits/labels are numpy; returns a
-    Python float.
+    Fits a single scalar temperature T > 0 to minimize NLL (Guo et al. 2017).
+
+    NLL is convex in 1/T, so it has a single minimum along log T and a
+    bounded 1-D search (scipy's bounded Brent method) finds it reliably.
+    This replaces an earlier torch L-BFGS fit (lr=0.01, no line search)
+    that stopped short of the optimum, badly so at large temperatures.
+
+    logits/labels are numpy; returns a Python float. Raises if the
+    optimum lands on the search bound.
     """
+    labels = np.asarray(labels, dtype=np.int64)
+    lo, hi = np.log(t_min), np.log(t_max)
+    res = minimize_scalar(lambda lt: nll_at_temperature(logits, labels, np.exp(lt)),
+                          bounds=(lo, hi), method="bounded",
+                          options={"xatol": xatol, "maxiter": 500})
+    if not res.success:
+        raise RuntimeError(f"temperature fit did not converge: {res.message}")
+    if not (lo + 1e-3 < res.x < hi - 1e-3):
+        raise RuntimeError(f"temperature hit the search bound: T={np.exp(res.x):.4g}")
+    return float(np.exp(res.x))
+
+
+def fit_temperature_lbfgs_reference(logits, labels, max_iter=100):
+    """Independent cross-check: torch L-BFGS on log T with lr=1 and a
+    strong-Wolfe line search, in float64. Should agree with
+    fit_temperature to about 3 decimal places."""
+    import torch
+    import torch.nn.functional as F
+    z = torch.tensor(np.asarray(logits), dtype=torch.float64)
+    y = torch.tensor(np.asarray(labels), dtype=torch.int64)
+    log_T = torch.zeros(1, dtype=torch.float64, requires_grad=True)
+    opt = torch.optim.LBFGS([log_T], lr=1.0, max_iter=max_iter,
+                            line_search_fn="strong_wolfe",
+                            tolerance_grad=1e-12, tolerance_change=1e-14)
+
+    def closure():
+        opt.zero_grad()
+        loss = F.cross_entropy(z / torch.exp(log_T), y)
+        loss.backward()
+        return loss
+
+    opt.step(closure)
+    return float(torch.exp(log_T).item())
+
+
+def fit_temperature_legacy(logits, labels, max_iter=200, lr=0.01):
+    """The ORIGINAL fit used for v1 of the paper (torch L-BFGS, lr=0.01,
+    no line search). It does not converge; kept only so the regression
+    check can confirm re-dumped logits reproduce the old CSV's
+    temperatures. Do not use for results."""
+    import torch
+    import torch.nn.functional as F
     logits_t = torch.tensor(logits, dtype=torch.float32)
     labels_t = torch.tensor(labels, dtype=torch.int64)
-
-    log_T = torch.zeros(1, requires_grad=True)  # optimize in log-space, guarantees T>0
+    log_T = torch.zeros(1, requires_grad=True)
     optimizer = torch.optim.LBFGS([log_T], lr=lr, max_iter=max_iter)
 
     def closure():
         optimizer.zero_grad()
-        T = torch.exp(log_T)
-        loss = F.cross_entropy(logits_t / T, labels_t)
+        loss = F.cross_entropy(logits_t / torch.exp(log_T), labels_t)
         loss.backward()
         return loss
 

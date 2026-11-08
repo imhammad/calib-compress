@@ -16,7 +16,8 @@ and Distillation Affect Uncertainty Under Domain Shift".
 - `src/distill.py`: ResNet-18 -> ResNet-10 distillation (T=2, KL weight 0.7).
 - `src/dump_logits.py`: saves logits for 33 checkpoints x 78 domains
   (CIFAR-10 val and test, 75 CIFAR-10-C conditions, STL-10).
-- `src/metrics.py`: ECE, adaptive ECE, classwise ECE, NLL, Brier, temperature scaling.
+- `src/metrics.py`: ECE, adaptive ECE, classwise ECE, NLL, Brier, temperature scaling
+  (T fit by a bounded 1-D search on log T; see the note below).
 - `src/analyze_calibration.py`: raw, source-fit and oracle-fit metrics for every
   checkpoint and domain -> `results/calibration_results.csv`.
 - `results/calibration_results.csv`: the single results file every table and figure is built from.
@@ -41,6 +42,18 @@ Logits are produced by `src/dump_logits.py` from trained checkpoints; run
 `python3 src/<script>.py --help` for each training and compression script's arguments.
 Trained checkpoints and logits are too large for this repository and will be
 released with the camera-ready version.
+
+## Temperature-fit fix (November 2026)
+
+The first version of `fit_temperature` used torch L-BFGS with lr=0.01 and no
+line search, which stopped short of the NLL optimum (badly so at the large
+temperatures seen under heavy shift; in 144 of 2,541 rows the oracle-fit NLL
+was above the source-fit NLL). It now uses a bounded 1-D search on log T,
+which finds the optimum because NLL is convex in 1/T. All temperature-scaling
+results were recomputed from re-dumped logits. `src/verify_recompute.py`
+checks the new results (raw-metric regression against the old CSV, oracle NLL
+<= source NLL on every row, agreement with L-BFGS plus a strong-Wolfe line
+search), and `src/compare_old_new.py` lists old and new headline numbers.
 
 ## Data
 

@@ -9,8 +9,12 @@ logit (CIFAR-10 index 6) is masked out of the softmax before ANY metric
 is computed (raw, source-fit, and oracle-fit). The source temperature is
 still fit on the unmasked CIFAR-10 validation split, which is correct.
 
+Temperatures are fit with metrics.fit_temperature (bounded 1-D search on
+log T). Every row is checked: the oracle-fit NLL must not exceed the
+source-fit NLL, since the oracle T minimizes NLL on that domain.
+
 Usage:
-    python3 src/analyze_calibration.py --logits-dir logits
+    python3 src/analyze_calibration.py --logits-dir logits [--out results/calibration_results.csv]
 """
 import glob
 import os
@@ -19,7 +23,7 @@ import re
 import numpy as np
 import pandas as pd
 
-from metrics import compute_all_metrics, fit_temperature, apply_temperature
+from metrics import compute_all_metrics, fit_temperature, apply_temperature, nll_at_temperature
 
 FROG_IDX = 6  # CIFAR-10 class with no STL-10 counterpart
 
@@ -39,7 +43,7 @@ def classify_checkpoint(name):
     return arch, method, seed
 
 
-def main(logits_dir="logits"):
+def main(logits_dir="logits", out_path="results/calibration_results.csv"):
     logit_files = sorted(glob.glob(f"{logits_dir}/*.npz"))
     print(f"Found {len(logit_files)} logit files")
 
@@ -99,15 +103,26 @@ def main(logits_dir="logits"):
             oracle_ts_logits = apply_temperature(logits, oracle_T)
             oracle_ts_metrics = compute_all_metrics(oracle_ts_logits, labels)
             row["oracle_T"] = oracle_T
+
+            # Sanity check: the oracle T minimizes NLL on this domain, so no
+            # other temperature (including the source T) can beat it.
+            if source_T is not None:
+                nll_src = nll_at_temperature(logits, labels, source_T)
+                nll_orc = nll_at_temperature(logits, labels, oracle_T)
+                if nll_orc > nll_src + 1e-9:
+                    raise AssertionError(
+                        f"{ckpt_name} / {domain_name}: oracle NLL {nll_orc:.8f} > "
+                        f"source NLL {nll_src:.8f} (oracle T={oracle_T:.5f}, source T={source_T:.5f})")
             for k, v in oracle_ts_metrics.items():
                 row[f"oraclets_{k}"] = v
 
             rows.append(row)
 
     df = pd.DataFrame(rows)
-    os.makedirs("results", exist_ok=True)
-    df.to_csv("results/calibration_results.csv", index=False)
-    print(f"\nDone. {len(df)} rows written to results/calibration_results.csv")
+    os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
+    df.to_csv(out_path, index=False)
+    print(f"\nDone. {len(df)} rows written to {out_path}")
+    print("Oracle-fit NLL <= source-fit NLL on every row with a source T.")
     print(f"Columns: {list(df.columns)}")
 
 
@@ -115,5 +130,6 @@ if __name__ == "__main__":
     import argparse
     p = argparse.ArgumentParser()
     p.add_argument("--logits-dir", default="logits")
+    p.add_argument("--out", default="results/calibration_results.csv")
     args = p.parse_args()
-    main(logits_dir=args.logits_dir)
+    main(logits_dir=args.logits_dir, out_path=args.out)
