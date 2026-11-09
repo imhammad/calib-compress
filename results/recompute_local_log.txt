@@ -1,0 +1,167 @@
+== Step 0: inputs ==
+old CSV: 2541 rows, md5 24fba0a157788e64525ed9017f9c4633
+logit files in logits/: 2574
+all 33 checkpoints x 78 domains present
+
+== Step 1: reproduce the old numbers from these logits ==
+source T (old fit) reproduced for all 33 checkpoints; worst relative difference 1.6e-16
+  250/2541 rows checked  (0.6 min)
+  500/2541 rows checked  (1.1 min)
+  750/2541 rows checked  (1.7 min)
+  1000/2541 rows checked  (2.2 min)
+  1250/2541 rows checked  (2.8 min)
+  1500/2541 rows checked  (3.3 min)
+  1750/2541 rows checked  (3.8 min)
+  2000/2541 rows checked  (4.4 min)
+  2250/2541 rows checked  (4.9 min)
+  2500/2541 rows checked  (5.5 min)
+  2541/2541 rows checked  (5.5 min)
+raw metrics:                    worst abs difference 2.2e-16  ('resnet10_kd_s0', 'cifar10c_gaussian_noise_sev3', 'raw_brier')
+metrics at the old CSV's Ts:    worst abs difference 2.2e-16  ('resnet10_kd_s0', 'cifar10c_gaussian_noise_sev5', 'sourcets_brier')
+oracle T (old fit, refit here): worst rel difference 2.2e-16  ('resnet18_str30_s2', 'cifar10c_motion_blur_sev5')
+STEP 1 PASSED: these logits and this code reproduce the old CSV.
+
+== Step 2: recompute with the fixed temperature fit ==
+  1/33 resnet10_kd_s0: source T old 1.4276 -> fixed 1.4846  (5.6 min)
+  2/33 resnet10_kd_s1: source T old 1.3931 -> fixed 1.4460  (5.6 min)
+  3/33 resnet10_kd_s2: source T old 1.4064 -> fixed 1.4608  (5.7 min)
+  4/33 resnet10_scratch_s0: source T old 1.5820 -> fixed 1.6762  (5.8 min)
+  5/33 resnet10_scratch_s1: source T old 1.5580 -> fixed 1.6483  (5.8 min)
+  6/33 resnet10_scratch_s2: source T old 1.5467 -> fixed 1.6362  (5.9 min)
+  7/33 resnet18_dense_s0: source T old 1.3897 -> fixed 1.4412  (5.9 min)
+  8/33 resnet18_dense_s1: source T old 1.4285 -> fixed 1.4852  (6.0 min)
+  9/33 resnet18_dense_s2: source T old 1.3848 -> fixed 1.4355  (6.0 min)
+  10/33 resnet18_denseft_s0: source T old 1.3811 -> fixed 1.4311  (6.1 min)
+  11/33 resnet18_denseft_s1: source T old 1.4027 -> fixed 1.4553  (6.1 min)
+  12/33 resnet18_denseft_s2: source T old 1.3717 -> fixed 1.4200  (6.2 min)
+  13/33 resnet18_int8_s0: source T old 1.3977 -> fixed 1.4502  (6.2 min)
+  14/33 resnet18_int8_s1: source T old 1.4334 -> fixed 1.4907  (6.3 min)
+  15/33 resnet18_int8_s2: source T old 1.3901 -> fixed 1.4414  (6.3 min)
+  16/33 resnet18_str15_s0: source T old 1.3988 -> fixed 1.4511  (6.4 min)
+  17/33 resnet18_str15_s1: source T old 1.4199 -> fixed 1.4751  (6.4 min)
+  18/33 resnet18_str15_s2: source T old 1.3976 -> fixed 1.4498  (6.5 min)
+  19/33 resnet18_str30_s0: source T old 1.3978 -> fixed 1.4503  (6.5 min)
+  20/33 resnet18_str30_s1: source T old 1.4112 -> fixed 1.4660  (6.6 min)
+  21/33 resnet18_str30_s2: source T old 1.3962 -> fixed 1.4487  (6.6 min)
+  22/33 resnet18_unstr30_s0: source T old 1.3667 -> fixed 1.4151  (6.7 min)
+  23/33 resnet18_unstr30_s1: source T old 1.4080 -> fixed 1.4613  (6.7 min)
+  24/33 resnet18_unstr30_s2: source T old 1.3705 -> fixed 1.4189  (6.8 min)
+  25/33 resnet18_unstr50_s0: source T old 1.3867 -> fixed 1.4374  (6.8 min)
+  26/33 resnet18_unstr50_s1: source T old 1.4196 -> fixed 1.4749  (6.9 min)
+  27/33 resnet18_unstr50_s2: source T old 1.3804 -> fixed 1.4301  (6.9 min)
+  28/33 resnet18_unstr70_s0: source T old 1.4189 -> fixed 1.4740  (7.0 min)
+  29/33 resnet18_unstr70_s1: source T old 1.4415 -> fixed 1.4996  (7.0 min)
+  30/33 resnet18_unstr70_s2: source T old 1.4100 -> fixed 1.4638  (7.1 min)
+  31/33 resnet18_unstr90_s0: source T old 1.4143 -> fixed 1.4692  (7.1 min)
+  32/33 resnet18_unstr90_s1: source T old 1.4866 -> fixed 1.5514  (7.2 min)
+  33/33 resnet18_unstr90_s2: source T old 1.4242 -> fixed 1.4801  (7.2 min)
+oracle NLL > source NLL: old CSV 144 rows, new 0 rows
+cross-check against L-BFGS with line search (15 largest oracle Ts, 25 random rows, 5 source fits):
+  worst relative difference 2.0e-07 (must be < 1e-3)
+STEP 2 PASSED. Wrote results/calibration_results_fixed.csv (2541 rows). results/calibration_results.csv was not changed.
+
+== Step 3: old vs new, and paper scripts on the new CSV ==
+                                                   old_fit  fixed_fit    change
+acc_cifar10/dense                                  94.6233    94.6233    0.0000
+T_src/dense                                         1.4010     1.4540    0.0530
+oracle_T_mean_c10c/dense                            1.8423     2.1669    0.3247
+gap_c10c/dense                                      0.0727     0.0982    0.0255
+gap_stl9/dense                                      0.0411     0.0475    0.0063
+recovered_frac_c10c/dense                           0.3921     0.3540   -0.0381
+acc_cifar10/denseft                                94.6767    94.6767    0.0000
+T_src/denseft                                       1.3852     1.4355    0.0503
+oracle_T_mean_c10c/denseft                          1.8266     2.1557    0.3291
+gap_c10c/denseft                                    0.0751     0.1019    0.0267
+gap_stl9/denseft                                    0.0411     0.0449    0.0038
+recovered_frac_c10c/denseft                         0.3803     0.3417   -0.0386
+acc_cifar10/unstr30                                94.5400    94.5400    0.0000
+T_src/unstr30                                       1.3817     1.4317    0.0500
+oracle_T_mean_c10c/unstr30                          1.8111     2.1301    0.3190
+gap_c10c/unstr30                                    0.0732     0.0990    0.0258
+gap_stl9/unstr30                                    0.0414     0.0472    0.0057
+recovered_frac_c10c/unstr30                         0.3826     0.3448   -0.0379
+acc_cifar10/unstr50                                94.5700    94.5700    0.0000
+T_src/unstr50                                       1.3956     1.4475    0.0519
+oracle_T_mean_c10c/unstr50                          1.8199     2.1269    0.3069
+gap_c10c/unstr50                                    0.0724     0.0988    0.0264
+gap_stl9/unstr50                                    0.0400     0.0456    0.0057
+recovered_frac_c10c/unstr50                         0.3927     0.3526   -0.0401
+acc_cifar10/unstr70                                94.5067    94.5067    0.0000
+T_src/unstr70                                       1.4235     1.4791    0.0557
+oracle_T_mean_c10c/unstr70                          1.8631     2.1781    0.3151
+gap_c10c/unstr70                                    0.0728     0.0996    0.0267
+gap_stl9/unstr70                                    0.0397     0.0449    0.0052
+recovered_frac_c10c/unstr70                         0.4009     0.3599   -0.0410
+acc_cifar10/unstr90                                94.4500    94.4500    0.0000
+T_src/unstr90                                       1.4417     1.5002    0.0586
+oracle_T_mean_c10c/unstr90                          1.9064     2.2555    0.3491
+gap_c10c/unstr90                                    0.0749     0.1038    0.0289
+gap_stl9/unstr90                                    0.0388     0.0468    0.0080
+recovered_frac_c10c/unstr90                         0.4002     0.3564   -0.0437
+acc_cifar10/str15                                  94.4500    94.4500    0.0000
+T_src/str15                                         1.4054     1.4587    0.0532
+oracle_T_mean_c10c/str15                            1.8408     2.1429    0.3021
+gap_c10c/str15                                      0.0734     0.0999    0.0265
+gap_stl9/str15                                      0.0407     0.0462    0.0055
+recovered_frac_c10c/str15                           0.3935     0.3537   -0.0398
+acc_cifar10/str30                                  94.4233    94.4233    0.0000
+T_src/str30                                         1.4018     1.4550    0.0533
+oracle_T_mean_c10c/str30                            1.8510     2.1679    0.3169
+gap_c10c/str30                                      0.0752     0.1014    0.0263
+gap_stl9/str30                                      0.0405     0.0459    0.0054
+recovered_frac_c10c/str30                           0.3889     0.3515   -0.0374
+acc_cifar10/int8                                   94.6333    94.6333    0.0000
+T_src/int8                                          1.4071     1.4608    0.0537
+oracle_T_mean_c10c/int8                             1.8505     2.1877    0.3372
+gap_c10c/int8                                       0.0731     0.0992    0.0262
+gap_stl9/int8                                       0.0409     0.0474    0.0065
+recovered_frac_c10c/int8                            0.3951     0.3556   -0.0395
+acc_cifar10/kd                                     94.2767    94.2767    0.0000
+T_src/kd                                            1.4091     1.4638    0.0547
+oracle_T_mean_c10c/kd                               1.9019     2.2721    0.3703
+gap_c10c/kd                                         0.0784     0.1044    0.0260
+gap_stl9/kd                                         0.0400     0.0443    0.0044
+recovered_frac_c10c/kd                              0.3817     0.3470   -0.0348
+acc_cifar10/scratch                                93.8733    93.8733    0.0000
+T_src/scratch                                       1.5622     1.6536    0.0913
+oracle_T_mean_c10c/scratch                          1.9861     2.4531    0.4670
+gap_c10c/scratch                                    0.0624     0.0846    0.0221
+gap_stl9/scratch                                    0.0323     0.0402    0.0078
+recovered_frac_c10c/scratch                         0.5245     0.4848   -0.0397
+kd_over_scratch_ratio/c10c                          1.2562     1.2350   -0.0212
+kd_minus_scratch_seed0/c10c                         0.0122     0.0139    0.0017
+kd_minus_scratch_seed1/c10c                         0.0178     0.0227    0.0049
+kd_minus_scratch_seed2/c10c                         0.0180     0.0230    0.0050
+kd_minus_dense_seed0/c10c                          -0.0000    -0.0017   -0.0017
+kd_minus_dense_seed1/c10c                           0.0166     0.0210    0.0045
+kd_minus_dense_seed2/c10c                           0.0007    -0.0005   -0.0011
+denseft_minus_dense_seed0/c10c                      0.0044     0.0081    0.0038
+denseft_minus_dense_seed1/c10c                      0.0027     0.0034    0.0007
+denseft_minus_dense_seed2/c10c                      0.0003    -0.0003   -0.0006
+kd_over_scratch_ratio/stl9                          1.2357     1.1037   -0.1321
+kd_minus_scratch_seed0/stl9                         0.0069     0.0002   -0.0067
+kd_minus_scratch_seed1/stl9                         0.0088     0.0064   -0.0024
+kd_minus_scratch_seed2/stl9                         0.0072     0.0059   -0.0013
+kd_minus_dense_seed0/stl9                          -0.0014    -0.0033   -0.0019
+kd_minus_dense_seed1/stl9                           0.0012    -0.0026   -0.0039
+kd_minus_dense_seed2/stl9                          -0.0034    -0.0035   -0.0000
+denseft_minus_dense_seed0/stl9                      0.0020    -0.0014   -0.0034
+denseft_minus_dense_seed1/stl9                     -0.0005    -0.0030   -0.0025
+denseft_minus_dense_seed2/stl9                     -0.0017    -0.0032   -0.0015
+kd_minus_scratch_sev1/c10c                          0.0066     0.0075    0.0010
+kd_minus_scratch_sev2/c10c                          0.0101     0.0115    0.0013
+kd_minus_scratch_sev3/c10c                          0.0156     0.0210    0.0053
+kd_minus_scratch_sev4/c10c                          0.0205     0.0251    0.0047
+kd_minus_scratch_sev5/c10c                          0.0272     0.0343    0.0071
+kd_minus_scratch_corruptions_positive_of_15/c10c   15.0000    15.0000    0.0000
+kd_minus_scratch_smallest_corruption/c10c           0.0041     0.0039   -0.0002
+kd_minus_scratch_largest_corruption/c10c            0.0260     0.0412    0.0152
+rows_oracle_nll_above_source_nll                  144.0000     0.0000 -144.0000
+saved results/old_vs_new.csv
+  check_numbers.py: ok
+  summarize_other_metrics.py: ok
+  review_numbers2.py: ok
+  plot_kd_corruption.py: ok
+paper-script outputs and both figures are in results_fixed_run/
+
+ALL DONE in 7.2 min.
