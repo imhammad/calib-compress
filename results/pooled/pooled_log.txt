@@ -1,0 +1,184 @@
+/Users/Research/Undergrad/Calibration_DL/Experiments/calib-compress/.venv/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+== Step 0: inputs ==
+Phase 2 CSV, Phase 2 split and Phase 3 CSV found (md5s match)
+33 checkpoints x 77 domains x 6 calibrators x 5 splits (seed 0 = Phase 2's split; CIFAR-10 5000/5000, STL-9 3600/3600)
+
+== Step 1: pooled cross-fitted oracles, 4 workers ==
+  1/33 resnet10_kd_s0 done  (5.0 min)
+  2/33 resnet10_kd_s1 done  (5.0 min)
+  3/33 resnet10_kd_s2 done  (5.0 min)
+  4/33 resnet10_scratch_s0 done  (5.0 min)
+  5/33 resnet18_dense_s1 done  (10.2 min)
+  6/33 resnet10_scratch_s2 done  (10.3 min)
+  7/33 resnet10_scratch_s1 done  (10.3 min)
+  8/33 resnet18_dense_s0 done  (10.4 min)
+  9/33 resnet18_dense_s2 done  (15.6 min)
+  10/33 resnet18_denseft_s1 done  (15.7 min)
+  11/33 resnet18_denseft_s0 done  (15.7 min)
+  12/33 resnet18_denseft_s2 done  (15.7 min)
+  13/33 resnet18_str15_s0 done  (21.1 min)
+  14/33 resnet18_int8_s1 done  (22.3 min)
+  15/33 resnet18_int8_s0 done  (22.3 min)
+  16/33 resnet18_int8_s2 done  (22.5 min)
+  17/33 resnet18_str15_s1 done  (26.5 min)
+  18/33 resnet18_str15_s2 done  (27.5 min)
+  19/33 resnet18_str30_s0 done  (27.6 min)
+  20/33 resnet18_str30_s1 done  (27.7 min)
+  21/33 resnet18_str30_s2 done  (31.7 min)
+  22/33 resnet18_unstr30_s0 done  (32.6 min)
+  23/33 resnet18_unstr30_s1 done  (32.8 min)
+  24/33 resnet18_unstr30_s2 done  (32.9 min)
+  25/33 resnet18_unstr50_s0 done  (36.9 min)
+  26/33 resnet18_unstr50_s1 done  (37.9 min)
+  27/33 resnet18_unstr50_s2 done  (38.1 min)
+  28/33 resnet18_unstr70_s0 done  (38.2 min)
+  29/33 resnet18_unstr70_s1 done  (42.3 min)
+  30/33 resnet18_unstr70_s2 done  (43.2 min)
+  31/33 resnet18_unstr90_s0 done  (43.5 min)
+  32/33 resnet18_unstr90_s1 done  (43.5 min)
+  33/33 resnet18_unstr90_s2 done  (46.0 min)
+
+== Step 2: checks ==
+check 1, split seed 0 vs Phase 2: half temperatures worst rel diff 2.2e-16; half-averaged NLL/Brier worst diff 2.2e-07; pooled minus half-averaged NLL/Brier 6.7e-16
+CHECK 1 PASSED.
+check 2, source-fit full-set numbers vs Phase 3: TS worst diff 2.2e-16; other calibrators worst diff 2.2e-16 (('resnet18_unstr30_s1', 'cifar10c_gaussian_noise_sev3', 'ms'), 'src_full_brier')
+CHECK 2 PASSED.
+check 3, each pooled oracle covers every image exactly once: yes (the script stops otherwise)
+oracle fits that failed (left out of that split's average): 0
+wrote results/pooled/calibration_results_pooled.csv (15246 rows)
+
+== Step 3: summary (pooled oracle, mean over 5 splits, then mean over 3 seeds) ==
+
+Clean CIFAR-10 test, gap to own oracle (should be ~0, in-domain):
+calibrator      ts      vs      ms     svs     sms     dir
+arm                                                       
+dense      -0.0006 -0.0003  0.0007 -0.0003  0.0006  0.0004
+denseft    -0.0002 -0.0007 -0.0003 -0.0001  0.0015  0.0004
+unstr30    -0.0003 -0.0005 -0.0009 -0.0009  0.0003 -0.0000
+unstr50    -0.0008  0.0002 -0.0005 -0.0003  0.0004  0.0002
+unstr70    -0.0003 -0.0008  0.0004 -0.0004  0.0001 -0.0001
+unstr90    -0.0003  0.0003  0.0010  0.0006 -0.0003  0.0015
+str15      -0.0003 -0.0013  0.0001  0.0001  0.0006 -0.0006
+str30      -0.0008 -0.0000 -0.0014  0.0010 -0.0003  0.0008
+int8       -0.0011 -0.0007 -0.0009  0.0001  0.0015  0.0010
+kd          0.0005 -0.0002 -0.0011 -0.0004 -0.0005 -0.0008
+scratch    -0.0006 -0.0007 -0.0012 -0.0006 -0.0006 -0.0014
+
+--- CIFAR-10-C (mean of 75 conditions) ---
+Gap to the pooled cross-fitted TS oracle:
+calibrator     ts     vs     ms    svs    sms    dir
+arm                                                 
+dense      0.0982 0.0964 0.1076 0.0974 0.0972 0.1036
+denseft    0.1020 0.0990 0.1099 0.1008 0.0998 0.1069
+unstr30    0.0990 0.0971 0.1078 0.0984 0.0979 0.1040
+unstr50    0.0988 0.0973 0.1090 0.0984 0.0981 0.1042
+unstr70    0.0996 0.0970 0.1058 0.0987 0.0979 0.1032
+unstr90    0.1038 0.1028 0.1129 0.1039 0.1040 0.1103
+str15      0.1000 0.0977 0.1067 0.0986 0.0980 0.1033
+str30      0.1015 0.0982 0.1073 0.1000 0.0994 0.1052
+int8       0.0993 0.0969 0.1097 0.0981 0.0976 0.1043
+kd         0.1044 0.1022 0.1068 0.1028 0.1008 0.1030
+scratch    0.0846 0.0827 0.0923 0.0831 0.0819 0.0867
+Gap to each calibrator's own pooled cross-fitted oracle:
+calibrator     ts     vs     ms    svs    sms    dir
+arm                                                 
+dense      0.0982 0.1058 0.1184 0.1019 0.1005 0.1146
+denseft    0.1020 0.1087 0.1210 0.1058 0.1030 0.1179
+unstr30    0.0990 0.1068 0.1191 0.1041 0.1024 0.1153
+unstr50    0.0988 0.1078 0.1212 0.1051 0.1035 0.1165
+unstr70    0.0996 0.1071 0.1171 0.1047 0.1025 0.1146
+unstr90    0.1038 0.1114 0.1230 0.1085 0.1074 0.1207
+str15      0.1000 0.1075 0.1180 0.1050 0.1028 0.1150
+str30      0.1015 0.1073 0.1179 0.1058 0.1036 0.1158
+int8       0.0993 0.1066 0.1206 0.1027 0.1010 0.1155
+kd         0.1044 0.1126 0.1181 0.1067 0.1029 0.1144
+scratch    0.0846 0.0904 0.1006 0.0809 0.0788 0.0959
+Fraction of the TS-oracle improvement recovered:
+calibrator     ts     vs     ms    svs    sms    dir
+arm                                                 
+dense      0.3538 0.3662 0.2922 0.3590 0.3608 0.3183
+denseft    0.3416 0.3605 0.2906 0.3491 0.3555 0.3095
+unstr30    0.3447 0.3572 0.2867 0.3489 0.3517 0.3117
+unstr50    0.3525 0.3623 0.2856 0.3553 0.3570 0.3170
+unstr70    0.3598 0.3763 0.3201 0.3655 0.3707 0.3368
+unstr90    0.3564 0.3630 0.3003 0.3563 0.3556 0.3165
+str15      0.3536 0.3683 0.3102 0.3621 0.3660 0.3317
+str30      0.3514 0.3726 0.3144 0.3607 0.3650 0.3275
+int8       0.3555 0.3712 0.2878 0.3632 0.3662 0.3232
+kd         0.3470 0.3609 0.3320 0.3571 0.3695 0.3557
+scratch    0.4847 0.4960 0.4376 0.4937 0.5013 0.4715
+KD minus scratch, per seed (s0 / s1 / s2), seeds positive, and KD/scratch ratio:
+  gap_tsor_ece  ts  : +0.0139 / +0.0227 / +0.0230   positive 3/3   ratio 1.235
+  gap_tsor_ece  vs  : +0.0173 / +0.0241 / +0.0169   positive 3/3   ratio 1.235
+  gap_tsor_ece  ms  : +0.0137 / +0.0158 / +0.0140   positive 3/3   ratio 1.157
+  gap_tsor_ece  svs : +0.0170 / +0.0237 / +0.0184   positive 3/3   ratio 1.237
+  gap_tsor_ece  sms : +0.0182 / +0.0211 / +0.0175   positive 3/3   ratio 1.232
+  gap_tsor_ece  dir : +0.0163 / +0.0172 / +0.0153   positive 3/3   ratio 1.188
+  gap_own_ece   ts  : +0.0139 / +0.0227 / +0.0230   positive 3/3   ratio 1.235
+  gap_own_ece   vs  : +0.0193 / +0.0280 / +0.0196   positive 3/3   ratio 1.247
+  gap_own_ece   ms  : +0.0160 / +0.0191 / +0.0174   positive 3/3   ratio 1.174
+  gap_own_ece   svs : +0.0244 / +0.0285 / +0.0245   positive 3/3   ratio 1.319
+  gap_own_ece   sms : +0.0251 / +0.0247 / +0.0226   positive 3/3   ratio 1.306
+  gap_own_ece   dir : +0.0180 / +0.0199 / +0.0176   positive 3/3   ratio 1.193
+  TS gap KD/scratch ratio over the 5 splits: 1.233 to 1.236
+
+--- STL-9 ---
+Gap to the pooled cross-fitted TS oracle:
+calibrator     ts     vs     ms    svs    sms    dir
+arm                                                 
+dense      0.0473 0.0480 0.0544 0.0471 0.0474 0.0504
+denseft    0.0451 0.0448 0.0494 0.0455 0.0455 0.0481
+unstr30    0.0472 0.0481 0.0542 0.0476 0.0479 0.0499
+unstr50    0.0455 0.0444 0.0508 0.0454 0.0443 0.0475
+unstr70    0.0444 0.0453 0.0520 0.0444 0.0451 0.0496
+unstr90    0.0466 0.0463 0.0534 0.0464 0.0462 0.0517
+str15      0.0462 0.0475 0.0527 0.0464 0.0456 0.0498
+str30      0.0461 0.0466 0.0508 0.0457 0.0454 0.0490
+int8       0.0475 0.0475 0.0538 0.0473 0.0470 0.0495
+kd         0.0448 0.0454 0.0514 0.0436 0.0438 0.0478
+scratch    0.0405 0.0436 0.0483 0.0410 0.0416 0.0461
+Gap to each calibrator's own pooled cross-fitted oracle:
+calibrator     ts     vs     ms    svs    sms    dir
+arm                                                 
+dense      0.0473 0.0547 0.0596 0.0505 0.0536 0.0549
+denseft    0.0451 0.0546 0.0555 0.0487 0.0530 0.0552
+unstr30    0.0472 0.0544 0.0596 0.0502 0.0544 0.0553
+unstr50    0.0455 0.0513 0.0576 0.0473 0.0505 0.0534
+unstr70    0.0444 0.0504 0.0578 0.0453 0.0495 0.0549
+unstr90    0.0466 0.0508 0.0562 0.0474 0.0491 0.0541
+str15      0.0462 0.0555 0.0568 0.0493 0.0498 0.0541
+str30      0.0461 0.0551 0.0572 0.0488 0.0521 0.0542
+int8       0.0475 0.0562 0.0601 0.0516 0.0542 0.0550
+kd         0.0448 0.0502 0.0558 0.0447 0.0481 0.0519
+scratch    0.0405 0.0414 0.0496 0.0393 0.0433 0.0486
+Fraction of the TS-oracle improvement recovered:
+calibrator     ts     vs     ms    svs    sms    dir
+arm                                                 
+dense      0.4646 0.4567 0.3840 0.4664 0.4629 0.4297
+denseft    0.4691 0.4722 0.4181 0.4639 0.4635 0.4329
+unstr30    0.4568 0.4461 0.3758 0.4518 0.4486 0.4251
+unstr50    0.4758 0.4890 0.4147 0.4775 0.4902 0.4532
+unstr70    0.4887 0.4788 0.4017 0.4886 0.4812 0.4296
+unstr90    0.4812 0.4846 0.4053 0.4835 0.4856 0.4244
+str15      0.4755 0.4613 0.4016 0.4735 0.4825 0.4344
+str30      0.4762 0.4714 0.4233 0.4810 0.4846 0.4443
+int8       0.4692 0.4687 0.3983 0.4709 0.4747 0.4464
+kd         0.4812 0.4738 0.4041 0.4943 0.4922 0.4462
+scratch    0.5900 0.5588 0.5108 0.5848 0.5785 0.5336
+KD minus scratch, per seed (s0 / s1 / s2), seeds positive, and KD/scratch ratio:
+  gap_tsor_ece  ts  : +0.0011 / +0.0064 / +0.0053   positive 3/3   ratio 1.105
+  gap_tsor_ece  vs  : -0.0004 / +0.0023 / +0.0036   positive 2/3   ratio 1.042
+  gap_tsor_ece  ms  : +0.0041 / -0.0009 / +0.0061   positive 2/3   ratio 1.064
+  gap_tsor_ece  svs : -0.0000 / +0.0047 / +0.0032   positive 2/3   ratio 1.064
+  gap_tsor_ece  sms : +0.0010 / +0.0003 / +0.0053   positive 3/3   ratio 1.052
+  gap_tsor_ece  dir : +0.0031 / -0.0021 / +0.0042   positive 2/3   ratio 1.037
+  gap_own_ece   ts  : +0.0011 / +0.0064 / +0.0053   positive 3/3   ratio 1.105
+  gap_own_ece   vs  : +0.0050 / +0.0144 / +0.0070   positive 3/3   ratio 1.212
+  gap_own_ece   ms  : +0.0026 / +0.0092 / +0.0067   positive 3/3   ratio 1.124
+  gap_own_ece   svs : +0.0052 / +0.0105 / +0.0003   positive 3/3   ratio 1.136
+  gap_own_ece   sms : +0.0031 / +0.0081 / +0.0033   positive 3/3   ratio 1.111
+  gap_own_ece   dir : +0.0043 / +0.0061 / -0.0006   positive 2/3   ratio 1.067
+  TS gap KD/scratch ratio over the 5 splits: 1.103 to 1.108
+
+ALL DONE in 46.0 min.
