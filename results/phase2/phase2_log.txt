@@ -1,0 +1,156 @@
+== Step 0: inputs ==
+Phase 1 CSV: results/calibration_results.csv (2541 rows, md5 09e6c158..., matches)
+logit files: all 33 checkpoints x 78 domains present
+
+== Step 1: labels and the A/B split ==
+CIFAR-10 test + 75 CIFAR-10-C conditions: identical labels, same order (10000 images) for all 33 checkpoints
+STL-9: identical labels for all checkpoints (7200 images)
+split seed 0: CIFAR-10 A/B = 5000/5000, per class 500-500 / 500-500
+                STL-9 A/B = 3600/3600, per class 400-400 / 400-400 (frog: 0)
+saved results/phase2/split_seed0.npz
+
+== Step 2: full-set check against Phase 1, cross-fitted oracle, new metrics ==
+  1/33 resnet10_kd_s0: source T 1.4846  (0.1 min)
+  2/33 resnet10_kd_s1: source T 1.4460  (0.3 min)
+  3/33 resnet10_kd_s2: source T 1.4608  (0.4 min)
+  4/33 resnet10_scratch_s0: source T 1.6762  (0.5 min)
+  5/33 resnet10_scratch_s1: source T 1.6483  (0.6 min)
+  6/33 resnet10_scratch_s2: source T 1.6362  (0.7 min)
+  7/33 resnet18_dense_s0: source T 1.4412  (0.8 min)
+  8/33 resnet18_dense_s1: source T 1.4852  (0.9 min)
+  9/33 resnet18_dense_s2: source T 1.4355  (1.1 min)
+  10/33 resnet18_denseft_s0: source T 1.4311  (1.2 min)
+  11/33 resnet18_denseft_s1: source T 1.4553  (1.3 min)
+  12/33 resnet18_denseft_s2: source T 1.4200  (1.4 min)
+  13/33 resnet18_int8_s0: source T 1.4502  (1.5 min)
+  14/33 resnet18_int8_s1: source T 1.4907  (1.6 min)
+  15/33 resnet18_int8_s2: source T 1.4414  (1.7 min)
+  16/33 resnet18_str15_s0: source T 1.4511  (1.9 min)
+  17/33 resnet18_str15_s1: source T 1.4751  (2.0 min)
+  18/33 resnet18_str15_s2: source T 1.4498  (2.1 min)
+  19/33 resnet18_str30_s0: source T 1.4503  (2.2 min)
+  20/33 resnet18_str30_s1: source T 1.4660  (2.3 min)
+  21/33 resnet18_str30_s2: source T 1.4487  (2.4 min)
+  22/33 resnet18_unstr30_s0: source T 1.4151  (2.5 min)
+  23/33 resnet18_unstr30_s1: source T 1.4613  (2.7 min)
+  24/33 resnet18_unstr30_s2: source T 1.4189  (2.8 min)
+  25/33 resnet18_unstr50_s0: source T 1.4374  (2.9 min)
+  26/33 resnet18_unstr50_s1: source T 1.4749  (3.0 min)
+  27/33 resnet18_unstr50_s2: source T 1.4301  (3.1 min)
+  28/33 resnet18_unstr70_s0: source T 1.4740  (3.2 min)
+  29/33 resnet18_unstr70_s1: source T 1.4996  (3.3 min)
+  30/33 resnet18_unstr70_s2: source T 1.4638  (3.5 min)
+  31/33 resnet18_unstr90_s0: source T 1.4692  (3.6 min)
+  32/33 resnet18_unstr90_s1: source T 1.5514  (3.7 min)
+  33/33 resnet18_unstr90_s2: source T 1.4801  (3.8 min)
+full-set reproduction of Phase 1: worst T rel diff 2.2e-16 ('resnet10_kd_s0', 'cifar10c_frost_sev4', 'oracle_T')
+                                  worst metric abs diff 5.9e-08 ('resnet18_unstr30_s1', 'cifar10c_defocus_blur_sev5', 'raw_nll')
+CHECK PASSED: full-set numbers reproduce the Phase 1 CSV.
+balanced accuracy minus accuracy: max |diff| 2.2e-16 (0 expected: every domain is class-balanced)
+rows where the cross-fitted ECE gap is negative (source beats held-out oracle): 167 of 2541
+optimism of the same-half oracle (held-out ECE minus same-half ECE): mean 0.0004, median 0.0002, min -0.0038, max 0.0089
+wrote results/phase2/calibration_results_phase2.csv (2541 rows), per_class_metrics.csv (25377 rows), confusion_matrices.npz (2541 matrices, rows = true class, counts)
+
+== Step 3: 4 more split seeds (robustness of the gaps) ==
+  split seed 1 done  (5.9 min)
+  split seed 2 done  (8.1 min)
+  split seed 3 done  (10.4 min)
+  split seed 4 done  (12.8 min)
+
+== Step 4: Phase 1 (same-image oracle) vs Phase 2 (cross-fitted oracle) ==
+                                                        phase1_same_image_oracle phase2_crossfit  change  all_splits_min  all_splits_max
+gap_c10c/dense/mean                                                       0.0982          0.0968 -0.0014          0.0966          0.0969
+gap_c10c/denseft/mean                                                     0.1019          0.1005 -0.0014          0.1001          0.1008
+gap_c10c/unstr30/mean                                                     0.0990          0.0976 -0.0013          0.0973          0.0977
+gap_c10c/unstr50/mean                                                     0.0988          0.0977 -0.0011          0.0974          0.0978
+gap_c10c/unstr70/mean                                                     0.0996          0.0983 -0.0013          0.0980          0.0984
+gap_c10c/unstr90/mean                                                     0.1038          0.1023 -0.0015          0.1018          0.1025
+gap_c10c/str15/mean                                                       0.0999          0.0986 -0.0014          0.0980          0.0986
+gap_c10c/str30/mean                                                       0.1014          0.0999 -0.0015          0.0994          0.1001
+gap_c10c/int8/mean                                                        0.0992          0.0978 -0.0014          0.0975          0.0980
+gap_c10c/kd/mean                                                          0.1044          0.1030 -0.0014          0.1027          0.1032
+gap_c10c/scratch/mean                                                     0.0846          0.0830 -0.0016          0.0826          0.0831
+kd_over_scratch_ratio/c10c                                                1.2350          1.2409  0.0059          1.2377          1.2437
+kd_minus_scratch/c10c/seed0                                               0.0139          0.0142  0.0003          0.0139          0.0142
+kd_minus_scratch/c10c/seed1                                               0.0227          0.0224 -0.0003          0.0224          0.0233
+kd_minus_scratch/c10c/seed2                                               0.0230          0.0234  0.0004          0.0228          0.0234
+unstr30_minus_denseft/c10c/seeds_positive_of_3                                 1               1  0.0000          1.0000          1.0000
+unstr50_minus_denseft/c10c/seeds_positive_of_3                                 1               1  0.0000          1.0000          1.0000
+unstr70_minus_denseft/c10c/seeds_positive_of_3                                 1               1  0.0000          1.0000          1.0000
+unstr90_minus_denseft/c10c/seeds_positive_of_3                                 2               2  0.0000          2.0000          2.0000
+str15_minus_denseft/c10c/seeds_positive_of_3                                   1               1  0.0000          1.0000          1.0000
+str30_minus_denseft/c10c/seeds_positive_of_3                                   2               2  0.0000          2.0000          2.0000
+int8_minus_denseft/c10c/seeds_positive_of_3                                    1               1  0.0000          1.0000          1.0000
+kd_minus_scratch_ece/c10c/seeds_positive_of_3                                  3               3  0.0000          3.0000          3.0000
+kd_minus_scratch_adaptive_ece/c10c/seeds_positive_of_3                         3               3  0.0000          3.0000          3.0000
+kd_minus_scratch_classwise_ece/c10c/seeds_positive_of_3                        3               3  0.0000          3.0000          3.0000
+kd_minus_scratch_nll/c10c/seeds_positive_of_3                                  3               3  0.0000          3.0000          3.0000
+kd_minus_scratch_brier/c10c/seeds_positive_of_3                                3               3  0.0000          3.0000          3.0000
+abs_srcts_ece_c10c/dense/mean                                             0.1223          0.1223  0.0000          0.1223          0.1228
+abs_srcts_ece_c10c/kd/mean                                                0.1281          0.1281  0.0000          0.1281          0.1286
+abs_srcts_ece_c10c/scratch/mean                                           0.1033          0.1033  0.0000          0.1033          0.1043
+recovered_frac_c10c/dense                                                 0.3540          0.3559  0.0019          0.3557          0.3565
+recovered_frac_c10c/denseft                                               0.3417          0.3434  0.0017          0.3430          0.3443
+recovered_frac_c10c/unstr30                                               0.3448          0.3466  0.0018          0.3463          0.3471
+recovered_frac_c10c/unstr50                                               0.3526          0.3541  0.0015          0.3536          0.3544
+recovered_frac_c10c/unstr70                                               0.3599          0.3617  0.0018          0.3613          0.3621
+recovered_frac_c10c/unstr90                                               0.3564          0.3584  0.0020          0.3583          0.3594
+recovered_frac_c10c/str15                                                 0.3537          0.3554  0.0017          0.3554          0.3566
+recovered_frac_c10c/str30                                                 0.3515          0.3538  0.0024          0.3533          0.3548
+recovered_frac_c10c/int8                                                  0.3556          0.3577  0.0021          0.3572          0.3584
+recovered_frac_c10c/kd                                                    0.3470          0.3491  0.0021          0.3485          0.3494
+recovered_frac_c10c/scratch                                               0.4848          0.4869  0.0021          0.4866          0.4879
+gap_stl9/dense/mean                                                       0.0475          0.0460 -0.0015          0.0460          0.0472
+gap_stl9/denseft/mean                                                     0.0449          0.0435 -0.0014          0.0435          0.0445
+gap_stl9/unstr30/mean                                                     0.0472          0.0456 -0.0016          0.0449          0.0465
+gap_stl9/unstr50/mean                                                     0.0456          0.0449 -0.0007          0.0433          0.0451
+gap_stl9/unstr70/mean                                                     0.0449          0.0447 -0.0002          0.0419          0.0449
+gap_stl9/unstr90/mean                                                     0.0468          0.0441 -0.0028          0.0441          0.0458
+gap_stl9/str15/mean                                                       0.0462          0.0452 -0.0010          0.0438          0.0454
+gap_stl9/str30/mean                                                       0.0459          0.0454 -0.0005          0.0444          0.0458
+gap_stl9/int8/mean                                                        0.0474          0.0467 -0.0007          0.0459          0.0473
+gap_stl9/kd/mean                                                          0.0443          0.0415 -0.0028          0.0415          0.0438
+gap_stl9/scratch/mean                                                     0.0402          0.0379 -0.0023          0.0378          0.0389
+kd_over_scratch_ratio/stl9                                                1.1037          1.0947 -0.0090          1.0947          1.1503
+kd_minus_scratch/stl9/seed0                                               0.0002          0.0005  0.0003          0.0005          0.0040
+kd_minus_scratch/stl9/seed1                                               0.0064          0.0060 -0.0004          0.0060          0.0080
+kd_minus_scratch/stl9/seed2                                               0.0059          0.0043 -0.0016          0.0041          0.0072
+unstr30_minus_denseft/stl9/seeds_positive_of_3                                 1               1  0.0000          1.0000          2.0000
+unstr50_minus_denseft/stl9/seeds_positive_of_3                                 2               2  0.0000          1.0000          2.0000
+unstr70_minus_denseft/stl9/seeds_positive_of_3                                 2               2  0.0000          2.0000          2.0000
+unstr90_minus_denseft/stl9/seeds_positive_of_3                                 2               2  0.0000          2.0000          2.0000
+str15_minus_denseft/stl9/seeds_positive_of_3                                   1               1  0.0000          1.0000          1.0000
+str30_minus_denseft/stl9/seeds_positive_of_3                                   2               2  0.0000          1.0000          2.0000
+int8_minus_denseft/stl9/seeds_positive_of_3                                    2               2  0.0000          2.0000          3.0000
+kd_minus_scratch_ece/stl9/seeds_positive_of_3                                  3               3  0.0000          3.0000          3.0000
+kd_minus_scratch_adaptive_ece/stl9/seeds_positive_of_3                         3               3  0.0000          3.0000          3.0000
+kd_minus_scratch_classwise_ece/stl9/seeds_positive_of_3                        3               3  0.0000          3.0000          3.0000
+kd_minus_scratch_nll/stl9/seeds_positive_of_3                                  3               3  0.0000          3.0000          3.0000
+kd_minus_scratch_brier/stl9/seeds_positive_of_3                                3               3  0.0000          3.0000          3.0000
+abs_srcts_ece_stl9/dense/mean                                             0.0723          0.0723  0.0000          0.0723          0.0727
+abs_srcts_ece_stl9/kd/mean                                                0.0683          0.0683  0.0000          0.0683          0.0690
+abs_srcts_ece_stl9/scratch/mean                                           0.0538          0.0538  0.0000          0.0538          0.0552
+gap_c10test/dense/mean                                                   -0.0006         -0.0009 -0.0003         -0.0010         -0.0002
+gap_c10test/denseft/mean                                                 -0.0003         -0.0011 -0.0008         -0.0012          0.0001
+gap_c10test/unstr30/mean                                                 -0.0003         -0.0010 -0.0007         -0.0010         -0.0003
+gap_c10test/unstr50/mean                                                 -0.0008         -0.0009 -0.0001         -0.0012         -0.0002
+gap_c10test/unstr70/mean                                                 -0.0003         -0.0009 -0.0005         -0.0009         -0.0006
+gap_c10test/unstr90/mean                                                 -0.0004         -0.0010 -0.0006         -0.0013          0.0000
+gap_c10test/str15/mean                                                   -0.0003         -0.0005 -0.0002         -0.0015         -0.0005
+gap_c10test/str30/mean                                                   -0.0010         -0.0009  0.0000         -0.0010         -0.0005
+gap_c10test/int8/mean                                                    -0.0011         -0.0016 -0.0005         -0.0016         -0.0007
+gap_c10test/kd/mean                                                       0.0003          0.0004  0.0000         -0.0009          0.0004
+gap_c10test/scratch/mean                                                 -0.0005         -0.0008 -0.0003         -0.0018         -0.0004
+kd_minus_scratch_sev1/c10c                                                0.0075          0.0073 -0.0002          0.0067          0.0073
+kd_minus_scratch_sev2/c10c                                                0.0115          0.0117  0.0002          0.0112          0.0119
+kd_minus_scratch_sev3/c10c                                                0.0210          0.0208 -0.0002          0.0204          0.0212
+kd_minus_scratch_sev4/c10c                                                0.0251          0.0255  0.0004          0.0255          0.0265
+kd_minus_scratch_sev5/c10c                                                0.0343          0.0347  0.0004          0.0345          0.0349
+kd_minus_scratch_corruptions_positive_of_15/c10c                              15              15  0.0000         15.0000         15.0000
+kd_minus_scratch_smallest_corruption/c10c                                 0.0039          0.0032 -0.0008          0.0029          0.0035
+kd_minus_scratch_smallest_corruption_name/c10c                        brightness      brightness     NaN             NaN             NaN
+kd_minus_scratch_largest_corruption/c10c                                  0.0412          0.0405 -0.0007          0.0405          0.0414
+kd_minus_scratch_largest_corruption_name/c10c                     gaussian_noise  gaussian_noise     NaN             NaN             NaN
+saved results/phase2/phase1_vs_phase2.csv (all 271 numbers, incl. per-seed values)
+
+ALL DONE in 12.8 min.
