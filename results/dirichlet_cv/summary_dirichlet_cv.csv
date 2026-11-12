@@ -1,0 +1,1189 @@
+setting,quantity,calibrator,arm,seed,value
+clean CIFAR-10 test,src_full_ece,ts,dense,0,0.0076452712327241
+clean CIFAR-10 test,src_full_ece,ts,dense,1,0.0071860206425189
+clean CIFAR-10 test,src_full_ece,ts,dense,2,0.0088556926906109
+clean CIFAR-10 test,src_full_ece,ts,denseft,0,0.0083139487162232
+clean CIFAR-10 test,src_full_ece,ts,denseft,1,0.0093347897827625
+clean CIFAR-10 test,src_full_ece,ts,denseft,2,0.0078258346691727
+clean CIFAR-10 test,src_full_ece,ts,unstr30,0,0.0081808215886354
+clean CIFAR-10 test,src_full_ece,ts,unstr30,1,0.0067505914360285
+clean CIFAR-10 test,src_full_ece,ts,unstr30,2,0.0113839271098375
+clean CIFAR-10 test,src_full_ece,ts,unstr50,0,0.0062246220737695
+clean CIFAR-10 test,src_full_ece,ts,unstr50,1,0.0079288849711418
+clean CIFAR-10 test,src_full_ece,ts,unstr50,2,0.0082249049276113
+clean CIFAR-10 test,src_full_ece,ts,unstr70,0,0.0073214877426624
+clean CIFAR-10 test,src_full_ece,ts,unstr70,1,0.0099056455492973
+clean CIFAR-10 test,src_full_ece,ts,unstr70,2,0.0103923128306865
+clean CIFAR-10 test,src_full_ece,ts,unstr90,0,0.0060820611730218
+clean CIFAR-10 test,src_full_ece,ts,unstr90,1,0.0068195485413074
+clean CIFAR-10 test,src_full_ece,ts,unstr90,2,0.0097103407382965
+clean CIFAR-10 test,src_full_ece,ts,str15,0,0.0067506746277213
+clean CIFAR-10 test,src_full_ece,ts,str15,1,0.010465906471014
+clean CIFAR-10 test,src_full_ece,ts,str15,2,0.0073341522246598
+clean CIFAR-10 test,src_full_ece,ts,str30,0,0.0060334647029638
+clean CIFAR-10 test,src_full_ece,ts,str30,1,0.0095874175369739
+clean CIFAR-10 test,src_full_ece,ts,str30,2,0.0059640796691178
+clean CIFAR-10 test,src_full_ece,ts,int8,0,0.0069283670842647
+clean CIFAR-10 test,src_full_ece,ts,int8,1,0.009136417761445
+clean CIFAR-10 test,src_full_ece,ts,int8,2,0.0058342526137828
+clean CIFAR-10 test,src_full_ece,ts,kd,0,0.0079961785435676
+clean CIFAR-10 test,src_full_ece,ts,kd,1,0.0087443919181823
+clean CIFAR-10 test,src_full_ece,ts,kd,2,0.0093710917174816
+clean CIFAR-10 test,src_full_ece,ts,scratch,0,0.007047727522254
+clean CIFAR-10 test,src_full_ece,ts,scratch,1,0.0055624992579221
+clean CIFAR-10 test,src_full_ece,ts,scratch,2,0.0043126267045736
+clean CIFAR-10 test,src_full_ece,dir,dense,0,0.0100641075855969
+clean CIFAR-10 test,src_full_ece,dir,dense,1,0.0094099495019492
+clean CIFAR-10 test,src_full_ece,dir,dense,2,0.0079938596508931
+clean CIFAR-10 test,src_full_ece,dir,denseft,0,0.0113974358817412
+clean CIFAR-10 test,src_full_ece,dir,denseft,1,0.0098141142859791
+clean CIFAR-10 test,src_full_ece,dir,denseft,2,0.0077642715058299
+clean CIFAR-10 test,src_full_ece,dir,unstr30,0,0.0071114587220655
+clean CIFAR-10 test,src_full_ece,dir,unstr30,1,0.0090850361839323
+clean CIFAR-10 test,src_full_ece,dir,unstr30,2,0.0111221569315892
+clean CIFAR-10 test,src_full_ece,dir,unstr50,0,0.0092651978591862
+clean CIFAR-10 test,src_full_ece,dir,unstr50,1,0.0094613851886791
+clean CIFAR-10 test,src_full_ece,dir,unstr50,2,0.0111738388983089
+clean CIFAR-10 test,src_full_ece,dir,unstr70,0,0.0089203517315009
+clean CIFAR-10 test,src_full_ece,dir,unstr70,1,0.0094479181380279
+clean CIFAR-10 test,src_full_ece,dir,unstr70,2,0.0114275221814077
+clean CIFAR-10 test,src_full_ece,dir,unstr90,0,0.0107337345196626
+clean CIFAR-10 test,src_full_ece,dir,unstr90,1,0.011657862616654
+clean CIFAR-10 test,src_full_ece,dir,unstr90,2,0.0112293070883059
+clean CIFAR-10 test,src_full_ece,dir,str15,0,0.0097189873538722
+clean CIFAR-10 test,src_full_ece,dir,str15,1,0.0083590638421372
+clean CIFAR-10 test,src_full_ece,dir,str15,2,0.0064389890787232
+clean CIFAR-10 test,src_full_ece,dir,str30,0,0.0082485914464963
+clean CIFAR-10 test,src_full_ece,dir,str30,1,0.0091690346986812
+clean CIFAR-10 test,src_full_ece,dir,str30,2,0.010279852189608
+clean CIFAR-10 test,src_full_ece,dir,int8,0,0.0121864931502267
+clean CIFAR-10 test,src_full_ece,dir,int8,1,0.0105486437370724
+clean CIFAR-10 test,src_full_ece,dir,int8,2,0.0068418406252659
+clean CIFAR-10 test,src_full_ece,dir,kd,0,0.0081269420174342
+clean CIFAR-10 test,src_full_ece,dir,kd,1,0.0104716375603666
+clean CIFAR-10 test,src_full_ece,dir,kd,2,0.0066648890432913
+clean CIFAR-10 test,src_full_ece,dir,scratch,0,0.0050618881306353
+clean CIFAR-10 test,src_full_ece,dir,scratch,1,0.0047619154423676
+clean CIFAR-10 test,src_full_ece,dir,scratch,2,0.0041527429343412
+clean CIFAR-10 test,src_full_ece,dir_cv,dense,0,0.010484871643651392
+clean CIFAR-10 test,src_full_ece,dir_cv,dense,1,0.009455301965517493
+clean CIFAR-10 test,src_full_ece,dir_cv,dense,2,0.007993859650893165
+clean CIFAR-10 test,src_full_ece,dir_cv,denseft,0,0.010764634289956054
+clean CIFAR-10 test,src_full_ece,dir_cv,denseft,1,0.00969623755166638
+clean CIFAR-10 test,src_full_ece,dir_cv,denseft,2,0.007764271505829989
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr30,0,0.005078814873480442
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr30,1,0.009085036183932305
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr30,2,0.011122156931589295
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr50,0,0.00926519785918621
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr50,1,0.00946138518867912
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr50,2,0.010426165649178452
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr70,0,0.008920351731500954
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr70,1,0.009447918138027929
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr70,2,0.011427522181407771
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr90,0,0.010671144163971018
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr90,1,0.011657862616654063
+clean CIFAR-10 test,src_full_ece,dir_cv,unstr90,2,0.011195371687691621
+clean CIFAR-10 test,src_full_ece,dir_cv,str15,0,0.009718987353872239
+clean CIFAR-10 test,src_full_ece,dir_cv,str15,1,0.00835906384213726
+clean CIFAR-10 test,src_full_ece,dir_cv,str15,2,0.006370994731059752
+clean CIFAR-10 test,src_full_ece,dir_cv,str30,0,0.00824859144649631
+clean CIFAR-10 test,src_full_ece,dir_cv,str30,1,0.009169034698681217
+clean CIFAR-10 test,src_full_ece,dir_cv,str30,2,0.010279852189608082
+clean CIFAR-10 test,src_full_ece,dir_cv,int8,0,0.01038709148297422
+clean CIFAR-10 test,src_full_ece,dir_cv,int8,1,0.010497938506876588
+clean CIFAR-10 test,src_full_ece,dir_cv,int8,2,0.006841840625265981
+clean CIFAR-10 test,src_full_ece,dir_cv,kd,0,0.008126942017434273
+clean CIFAR-10 test,src_full_ece,dir_cv,kd,1,0.008830442111265886
+clean CIFAR-10 test,src_full_ece,dir_cv,kd,2,0.007260785679490109
+clean CIFAR-10 test,src_full_ece,dir_cv,scratch,0,0.0059544641696995335
+clean CIFAR-10 test,src_full_ece,dir_cv,scratch,1,0.005259325616310265
+clean CIFAR-10 test,src_full_ece,dir_cv,scratch,2,0.004468449136309847
+clean CIFAR-10 test,src_full_nll,ts,dense,0,0.1739548295736313
+clean CIFAR-10 test,src_full_nll,ts,dense,1,0.1854541450738906
+clean CIFAR-10 test,src_full_nll,ts,dense,2,0.1754462718963623
+clean CIFAR-10 test,src_full_nll,ts,denseft,0,0.179120123386383
+clean CIFAR-10 test,src_full_nll,ts,denseft,1,0.1825380325317382
+clean CIFAR-10 test,src_full_nll,ts,denseft,2,0.1759872883558273
+clean CIFAR-10 test,src_full_nll,ts,unstr30,0,0.1727442890405655
+clean CIFAR-10 test,src_full_nll,ts,unstr30,1,0.188843086361885
+clean CIFAR-10 test,src_full_nll,ts,unstr30,2,0.1794764995574951
+clean CIFAR-10 test,src_full_nll,ts,unstr50,0,0.1782436072826385
+clean CIFAR-10 test,src_full_nll,ts,unstr50,1,0.1873442828655243
+clean CIFAR-10 test,src_full_nll,ts,unstr50,2,0.1773014068603515
+clean CIFAR-10 test,src_full_nll,ts,unstr70,0,0.1769751012325287
+clean CIFAR-10 test,src_full_nll,ts,unstr70,1,0.1909932196140289
+clean CIFAR-10 test,src_full_nll,ts,unstr70,2,0.182010069489479
+clean CIFAR-10 test,src_full_nll,ts,unstr90,0,0.1736943125724792
+clean CIFAR-10 test,src_full_nll,ts,unstr90,1,0.1958754807710647
+clean CIFAR-10 test,src_full_nll,ts,unstr90,2,0.1835118234157562
+clean CIFAR-10 test,src_full_nll,ts,str15,0,0.1777281761169433
+clean CIFAR-10 test,src_full_nll,ts,str15,1,0.1905980557203292
+clean CIFAR-10 test,src_full_nll,ts,str15,2,0.1811783015727996
+clean CIFAR-10 test,src_full_nll,ts,str30,0,0.1858709752559662
+clean CIFAR-10 test,src_full_nll,ts,str30,1,0.1957887262105941
+clean CIFAR-10 test,src_full_nll,ts,str30,2,0.1890927702188491
+clean CIFAR-10 test,src_full_nll,ts,int8,0,0.1740559041500091
+clean CIFAR-10 test,src_full_nll,ts,int8,1,0.1872739940881729
+clean CIFAR-10 test,src_full_nll,ts,int8,2,0.1766967475414276
+clean CIFAR-10 test,src_full_nll,ts,kd,0,0.185768261551857
+clean CIFAR-10 test,src_full_nll,ts,kd,1,0.1840440481901168
+clean CIFAR-10 test,src_full_nll,ts,kd,2,0.1793438792228698
+clean CIFAR-10 test,src_full_nll,ts,scratch,0,0.1936084777116775
+clean CIFAR-10 test,src_full_nll,ts,scratch,1,0.1954296082258224
+clean CIFAR-10 test,src_full_nll,ts,scratch,2,0.1896777153015136
+clean CIFAR-10 test,src_full_nll,dir,dense,0,0.1743265143657407
+clean CIFAR-10 test,src_full_nll,dir,dense,1,0.1839154689001629
+clean CIFAR-10 test,src_full_nll,dir,dense,2,0.1790508728828352
+clean CIFAR-10 test,src_full_nll,dir,denseft,0,0.1790342846651531
+clean CIFAR-10 test,src_full_nll,dir,denseft,1,0.1804535942013965
+clean CIFAR-10 test,src_full_nll,dir,denseft,2,0.1762602380294258
+clean CIFAR-10 test,src_full_nll,dir,unstr30,0,0.1697664008379451
+clean CIFAR-10 test,src_full_nll,dir,unstr30,1,0.1840697423411784
+clean CIFAR-10 test,src_full_nll,dir,unstr30,2,0.1799466859787359
+clean CIFAR-10 test,src_full_nll,dir,unstr50,0,0.1751130969786128
+clean CIFAR-10 test,src_full_nll,dir,unstr50,1,0.1837709416373437
+clean CIFAR-10 test,src_full_nll,dir,unstr50,2,0.1781146764839483
+clean CIFAR-10 test,src_full_nll,dir,unstr70,0,0.1754276661504201
+clean CIFAR-10 test,src_full_nll,dir,unstr70,1,0.1880163495521434
+clean CIFAR-10 test,src_full_nll,dir,unstr70,2,0.18225636907554
+clean CIFAR-10 test,src_full_nll,dir,unstr90,0,0.1778040017177866
+clean CIFAR-10 test,src_full_nll,dir,unstr90,1,0.1932346602970613
+clean CIFAR-10 test,src_full_nll,dir,unstr90,2,0.1844874185715355
+clean CIFAR-10 test,src_full_nll,dir,str15,0,0.1758864203942792
+clean CIFAR-10 test,src_full_nll,dir,str15,1,0.1891622424781849
+clean CIFAR-10 test,src_full_nll,dir,str15,2,0.1831115997024885
+clean CIFAR-10 test,src_full_nll,dir,str30,0,0.192222290313368
+clean CIFAR-10 test,src_full_nll,dir,str30,1,0.1908453985900469
+clean CIFAR-10 test,src_full_nll,dir,str30,2,0.1893332646380379
+clean CIFAR-10 test,src_full_nll,dir,int8,0,0.1744588956947274
+clean CIFAR-10 test,src_full_nll,dir,int8,1,0.1855554151598461
+clean CIFAR-10 test,src_full_nll,dir,int8,2,0.1794771998642403
+clean CIFAR-10 test,src_full_nll,dir,kd,0,0.182664239312938
+clean CIFAR-10 test,src_full_nll,dir,kd,1,0.1824204375596121
+clean CIFAR-10 test,src_full_nll,dir,kd,2,0.1784439297328499
+clean CIFAR-10 test,src_full_nll,dir,scratch,0,0.1914552320684792
+clean CIFAR-10 test,src_full_nll,dir,scratch,1,0.1958662917135552
+clean CIFAR-10 test,src_full_nll,dir,scratch,2,0.1879677039056367
+clean CIFAR-10 test,src_full_nll,dir_cv,dense,0,0.17394506826865044
+clean CIFAR-10 test,src_full_nll,dir_cv,dense,1,0.1840101385589106
+clean CIFAR-10 test,src_full_nll,dir_cv,dense,2,0.17905087288283522
+clean CIFAR-10 test,src_full_nll,dir_cv,denseft,0,0.17845907769645403
+clean CIFAR-10 test,src_full_nll,dir_cv,denseft,1,0.18039541598607053
+clean CIFAR-10 test,src_full_nll,dir_cv,denseft,2,0.1762602380294258
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr30,0,0.1691312177380746
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr30,1,0.18406974234117848
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr30,2,0.17994668597873592
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr50,0,0.17511309697861285
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr50,1,0.18377094163734373
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr50,2,0.1772161375649138
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr70,0,0.1754276661504201
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr70,1,0.18801634955214344
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr70,2,0.18225636907554008
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr90,0,0.1780744933784391
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr90,1,0.1932346602970613
+clean CIFAR-10 test,src_full_nll,dir_cv,unstr90,2,0.18464222867015292
+clean CIFAR-10 test,src_full_nll,dir_cv,str15,0,0.17588642039427926
+clean CIFAR-10 test,src_full_nll,dir_cv,str15,1,0.18916224247818492
+clean CIFAR-10 test,src_full_nll,dir_cv,str15,2,0.18333574605009353
+clean CIFAR-10 test,src_full_nll,dir_cv,str30,0,0.19222229031336807
+clean CIFAR-10 test,src_full_nll,dir_cv,str30,1,0.19084539859004696
+clean CIFAR-10 test,src_full_nll,dir_cv,str30,2,0.18933326463803793
+clean CIFAR-10 test,src_full_nll,dir_cv,int8,0,0.17404966184957885
+clean CIFAR-10 test,src_full_nll,dir_cv,int8,1,0.1855952143933931
+clean CIFAR-10 test,src_full_nll,dir_cv,int8,2,0.17947719986424032
+clean CIFAR-10 test,src_full_nll,dir_cv,kd,0,0.18266423931293801
+clean CIFAR-10 test,src_full_nll,dir_cv,kd,1,0.18235479091166293
+clean CIFAR-10 test,src_full_nll,dir_cv,kd,2,0.17865736538599516
+clean CIFAR-10 test,src_full_nll,dir_cv,scratch,0,0.19125559815534557
+clean CIFAR-10 test,src_full_nll,dir_cv,scratch,1,0.19606265018691857
+clean CIFAR-10 test,src_full_nll,dir_cv,scratch,2,0.18781472193382462
+clean CIFAR-10 test,accuracy_src_full,ts,dense,0,0.9482
+clean CIFAR-10 test,accuracy_src_full,ts,dense,1,0.943
+clean CIFAR-10 test,accuracy_src_full,ts,dense,2,0.9475
+clean CIFAR-10 test,accuracy_src_full,ts,denseft,0,0.9454
+clean CIFAR-10 test,accuracy_src_full,ts,denseft,1,0.945
+clean CIFAR-10 test,accuracy_src_full,ts,denseft,2,0.9499
+clean CIFAR-10 test,accuracy_src_full,ts,unstr30,0,0.9472
+clean CIFAR-10 test,accuracy_src_full,ts,unstr30,1,0.9431
+clean CIFAR-10 test,accuracy_src_full,ts,unstr30,2,0.9459
+clean CIFAR-10 test,accuracy_src_full,ts,unstr50,0,0.9471
+clean CIFAR-10 test,accuracy_src_full,ts,unstr50,1,0.9423
+clean CIFAR-10 test,accuracy_src_full,ts,unstr50,2,0.9477
+clean CIFAR-10 test,accuracy_src_full,ts,unstr70,0,0.9477
+clean CIFAR-10 test,accuracy_src_full,ts,unstr70,1,0.9431
+clean CIFAR-10 test,accuracy_src_full,ts,unstr70,2,0.9444
+clean CIFAR-10 test,accuracy_src_full,ts,unstr90,0,0.9473
+clean CIFAR-10 test,accuracy_src_full,ts,unstr90,1,0.9413
+clean CIFAR-10 test,accuracy_src_full,ts,unstr90,2,0.9449
+clean CIFAR-10 test,accuracy_src_full,ts,str15,0,0.9463
+clean CIFAR-10 test,accuracy_src_full,ts,str15,1,0.9408
+clean CIFAR-10 test,accuracy_src_full,ts,str15,2,0.9464
+clean CIFAR-10 test,accuracy_src_full,ts,str30,0,0.9453
+clean CIFAR-10 test,accuracy_src_full,ts,str30,1,0.9426
+clean CIFAR-10 test,accuracy_src_full,ts,str30,2,0.9448
+clean CIFAR-10 test,accuracy_src_full,ts,int8,0,0.9484
+clean CIFAR-10 test,accuracy_src_full,ts,int8,1,0.9433
+clean CIFAR-10 test,accuracy_src_full,ts,int8,2,0.9473
+clean CIFAR-10 test,accuracy_src_full,ts,kd,0,0.9433
+clean CIFAR-10 test,accuracy_src_full,ts,kd,1,0.9429
+clean CIFAR-10 test,accuracy_src_full,ts,kd,2,0.9421
+clean CIFAR-10 test,accuracy_src_full,ts,scratch,0,0.9401
+clean CIFAR-10 test,accuracy_src_full,ts,scratch,1,0.9368
+clean CIFAR-10 test,accuracy_src_full,ts,scratch,2,0.9393
+clean CIFAR-10 test,accuracy_src_full,dir,dense,0,0.9459
+clean CIFAR-10 test,accuracy_src_full,dir,dense,1,0.9431
+clean CIFAR-10 test,accuracy_src_full,dir,dense,2,0.9471
+clean CIFAR-10 test,accuracy_src_full,dir,denseft,0,0.9439
+clean CIFAR-10 test,accuracy_src_full,dir,denseft,1,0.9421
+clean CIFAR-10 test,accuracy_src_full,dir,denseft,2,0.9484
+clean CIFAR-10 test,accuracy_src_full,dir,unstr30,0,0.9485
+clean CIFAR-10 test,accuracy_src_full,dir,unstr30,1,0.943
+clean CIFAR-10 test,accuracy_src_full,dir,unstr30,2,0.9434
+clean CIFAR-10 test,accuracy_src_full,dir,unstr50,0,0.9463
+clean CIFAR-10 test,accuracy_src_full,dir,unstr50,1,0.9422
+clean CIFAR-10 test,accuracy_src_full,dir,unstr50,2,0.9443
+clean CIFAR-10 test,accuracy_src_full,dir,unstr70,0,0.9465
+clean CIFAR-10 test,accuracy_src_full,dir,unstr70,1,0.942
+clean CIFAR-10 test,accuracy_src_full,dir,unstr70,2,0.9438
+clean CIFAR-10 test,accuracy_src_full,dir,unstr90,0,0.9457
+clean CIFAR-10 test,accuracy_src_full,dir,unstr90,1,0.9394
+clean CIFAR-10 test,accuracy_src_full,dir,unstr90,2,0.9431
+clean CIFAR-10 test,accuracy_src_full,dir,str15,0,0.9446
+clean CIFAR-10 test,accuracy_src_full,dir,str15,1,0.9418
+clean CIFAR-10 test,accuracy_src_full,dir,str15,2,0.9461
+clean CIFAR-10 test,accuracy_src_full,dir,str30,0,0.9436
+clean CIFAR-10 test,accuracy_src_full,dir,str30,1,0.9415
+clean CIFAR-10 test,accuracy_src_full,dir,str30,2,0.9412
+clean CIFAR-10 test,accuracy_src_full,dir,int8,0,0.9451
+clean CIFAR-10 test,accuracy_src_full,dir,int8,1,0.9421
+clean CIFAR-10 test,accuracy_src_full,dir,int8,2,0.9472
+clean CIFAR-10 test,accuracy_src_full,dir,kd,0,0.9418
+clean CIFAR-10 test,accuracy_src_full,dir,kd,1,0.9406
+clean CIFAR-10 test,accuracy_src_full,dir,kd,2,0.9428
+clean CIFAR-10 test,accuracy_src_full,dir,scratch,0,0.938
+clean CIFAR-10 test,accuracy_src_full,dir,scratch,1,0.9343
+clean CIFAR-10 test,accuracy_src_full,dir,scratch,2,0.9382
+clean CIFAR-10 test,accuracy_src_full,dir_cv,dense,0,0.9463
+clean CIFAR-10 test,accuracy_src_full,dir_cv,dense,1,0.9426
+clean CIFAR-10 test,accuracy_src_full,dir_cv,dense,2,0.9471
+clean CIFAR-10 test,accuracy_src_full,dir_cv,denseft,0,0.9445
+clean CIFAR-10 test,accuracy_src_full,dir_cv,denseft,1,0.9419
+clean CIFAR-10 test,accuracy_src_full,dir_cv,denseft,2,0.9484
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr30,0,0.9489
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr30,1,0.943
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr30,2,0.9434
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr50,0,0.9463
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr50,1,0.9422
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr50,2,0.9441
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr70,0,0.9465
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr70,1,0.942
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr70,2,0.9438
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr90,0,0.9457
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr90,1,0.9394
+clean CIFAR-10 test,accuracy_src_full,dir_cv,unstr90,2,0.9433
+clean CIFAR-10 test,accuracy_src_full,dir_cv,str15,0,0.9446
+clean CIFAR-10 test,accuracy_src_full,dir_cv,str15,1,0.9418
+clean CIFAR-10 test,accuracy_src_full,dir_cv,str15,2,0.946
+clean CIFAR-10 test,accuracy_src_full,dir_cv,str30,0,0.9436
+clean CIFAR-10 test,accuracy_src_full,dir_cv,str30,1,0.9415
+clean CIFAR-10 test,accuracy_src_full,dir_cv,str30,2,0.9412
+clean CIFAR-10 test,accuracy_src_full,dir_cv,int8,0,0.9463
+clean CIFAR-10 test,accuracy_src_full,dir_cv,int8,1,0.9416
+clean CIFAR-10 test,accuracy_src_full,dir_cv,int8,2,0.9472
+clean CIFAR-10 test,accuracy_src_full,dir_cv,kd,0,0.9418
+clean CIFAR-10 test,accuracy_src_full,dir_cv,kd,1,0.941
+clean CIFAR-10 test,accuracy_src_full,dir_cv,kd,2,0.9427
+clean CIFAR-10 test,accuracy_src_full,dir_cv,scratch,0,0.9382
+clean CIFAR-10 test,accuracy_src_full,dir_cv,scratch,1,0.9343
+clean CIFAR-10 test,accuracy_src_full,dir_cv,scratch,2,0.9387
+clean CIFAR-10 test,gap_own_ece,ts,dense,0,-0.0007535614391316
+clean CIFAR-10 test,gap_own_ece,ts,dense,1,-0.0011211191877497
+clean CIFAR-10 test,gap_own_ece,ts,dense,2,0.0001869096536978
+clean CIFAR-10 test,gap_own_ece,ts,denseft,0,-0.0006836827314442
+clean CIFAR-10 test,gap_own_ece,ts,denseft,1,0.000295023573837
+clean CIFAR-10 test,gap_own_ece,ts,denseft,2,-0.0002225787927812
+clean CIFAR-10 test,gap_own_ece,ts,unstr30,0,0.0003609855498838
+clean CIFAR-10 test,gap_own_ece,ts,unstr30,1,-0.001112195703905
+clean CIFAR-10 test,gap_own_ece,ts,unstr30,2,-0.0002420848990466
+clean CIFAR-10 test,gap_own_ece,ts,unstr50,0,-0.0015083401559431
+clean CIFAR-10 test,gap_own_ece,ts,unstr50,1,-0.0008501499852105
+clean CIFAR-10 test,gap_own_ece,ts,unstr50,2,9.358387525494095e-05
+clean CIFAR-10 test,gap_own_ece,ts,unstr70,0,-0.001286895961514
+clean CIFAR-10 test,gap_own_ece,ts,unstr70,1,0.000273981315145
+clean CIFAR-10 test,gap_own_ece,ts,unstr70,2,9.484751396686766e-06
+clean CIFAR-10 test,gap_own_ece,ts,unstr90,0,-0.0009512616916471
+clean CIFAR-10 test,gap_own_ece,ts,unstr90,1,-0.0005697009598261
+clean CIFAR-10 test,gap_own_ece,ts,unstr90,2,0.0007164891405032
+clean CIFAR-10 test,gap_own_ece,ts,str15,0,-0.0012489586933527
+clean CIFAR-10 test,gap_own_ece,ts,str15,1,-0.0002806967576576
+clean CIFAR-10 test,gap_own_ece,ts,str15,2,0.0005488346285798
+clean CIFAR-10 test,gap_own_ece,ts,str30,0,-0.0016391453722017
+clean CIFAR-10 test,gap_own_ece,ts,str30,1,-0.0001134396386439
+clean CIFAR-10 test,gap_own_ece,ts,str30,2,-0.0007260227177841
+clean CIFAR-10 test,gap_own_ece,ts,int8,0,-0.0016355250489087
+clean CIFAR-10 test,gap_own_ece,ts,int8,1,-0.0007017869208914
+clean CIFAR-10 test,gap_own_ece,ts,int8,2,-0.0010883348023215
+clean CIFAR-10 test,gap_own_ece,ts,kd,0,0.0007604656427222
+clean CIFAR-10 test,gap_own_ece,ts,kd,1,0.0002131457033958
+clean CIFAR-10 test,gap_own_ece,ts,kd,2,0.0004141326173829
+clean CIFAR-10 test,gap_own_ece,ts,scratch,0,0.001188246633048
+clean CIFAR-10 test,gap_own_ece,ts,scratch,1,-0.0017750759430908
+clean CIFAR-10 test,gap_own_ece,ts,scratch,2,-0.0012518240326876
+clean CIFAR-10 test,gap_own_ece,dir,dense,0,0.0018728594502029
+clean CIFAR-10 test,gap_own_ece,dir,dense,1,-0.0006896117990426
+clean CIFAR-10 test,gap_own_ece,dir,dense,2,0.0001264590864457
+clean CIFAR-10 test,gap_own_ece,dir,denseft,0,0.0014256357693105
+clean CIFAR-10 test,gap_own_ece,dir,denseft,1,0.0007066856233609
+clean CIFAR-10 test,gap_own_ece,dir,denseft,2,-0.0008235970258122
+clean CIFAR-10 test,gap_own_ece,dir,unstr30,0,-0.0005055424141308
+clean CIFAR-10 test,gap_own_ece,dir,unstr30,1,0.0001123035359352
+clean CIFAR-10 test,gap_own_ece,dir,unstr30,2,0.0002864726733546
+clean CIFAR-10 test,gap_own_ece,dir,unstr50,0,-9.158308944236077e-05
+clean CIFAR-10 test,gap_own_ece,dir,unstr50,1,-0.0012170279231604
+clean CIFAR-10 test,gap_own_ece,dir,unstr50,2,0.0017597182841407
+clean CIFAR-10 test,gap_own_ece,dir,unstr70,0,9.027696985224044e-05
+clean CIFAR-10 test,gap_own_ece,dir,unstr70,1,-0.0006847680668768
+clean CIFAR-10 test,gap_own_ece,dir,unstr70,2,0.0002531227394743
+clean CIFAR-10 test,gap_own_ece,dir,unstr90,0,0.0036968694402519
+clean CIFAR-10 test,gap_own_ece,dir,unstr90,1,0.0005876433905244
+clean CIFAR-10 test,gap_own_ece,dir,unstr90,2,0.0002710533261207
+clean CIFAR-10 test,gap_own_ece,dir,str15,0,0.0011907470704602
+clean CIFAR-10 test,gap_own_ece,dir,str15,1,-0.0015046824653922
+clean CIFAR-10 test,gap_own_ece,dir,str15,2,-0.0014441608337605
+clean CIFAR-10 test,gap_own_ece,dir,str30,0,0.000385600482705
+clean CIFAR-10 test,gap_own_ece,dir,str30,1,0.001509654233435
+clean CIFAR-10 test,gap_own_ece,dir,str30,2,0.0005210532002048
+clean CIFAR-10 test,gap_own_ece,dir,int8,0,0.0032696980118169
+clean CIFAR-10 test,gap_own_ece,dir,int8,1,0.0002966849018879
+clean CIFAR-10 test,gap_own_ece,dir,int8,2,-0.0004308917160945
+clean CIFAR-10 test,gap_own_ece,dir,kd,0,-0.0003586906435614
+clean CIFAR-10 test,gap_own_ece,dir,kd,1,-0.0003536078432145
+clean CIFAR-10 test,gap_own_ece,dir,kd,2,-0.0016094419653508
+clean CIFAR-10 test,gap_own_ece,dir,scratch,0,-0.0009385032954295
+clean CIFAR-10 test,gap_own_ece,dir,scratch,1,-0.0023525502229978
+clean CIFAR-10 test,gap_own_ece,dir,scratch,2,-0.000958542785866
+clean CIFAR-10 test,gap_own_ece,dir_cv,dense,0,0.0022955915327810203
+clean CIFAR-10 test,gap_own_ece,dir_cv,dense,1,-0.0012839458551232308
+clean CIFAR-10 test,gap_own_ece,dir_cv,dense,2,0.00012645908644579387
+clean CIFAR-10 test,gap_own_ece,dir_cv,denseft,0,0.001052069515938111
+clean CIFAR-10 test,gap_own_ece,dir_cv,denseft,1,0.0007942654335280144
+clean CIFAR-10 test,gap_own_ece,dir_cv,denseft,2,-0.0008235970258122609
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr30,0,-0.002354704554025462
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr30,1,0.00011230353593525387
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr30,2,0.00028647267335467873
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr50,0,-9.158308944236075e-05
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr50,1,-0.0012170279231604377
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr50,2,0.0010824899219325952
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr70,0,9.027696985224043e-05
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr70,1,-0.0006847680668768518
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr70,2,0.00025312273947438596
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr90,0,0.003041150039037599
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr90,1,0.0005876433905244172
+clean CIFAR-10 test,gap_own_ece,dir_cv,unstr90,2,0.00013922999179641696
+clean CIFAR-10 test,gap_own_ece,dir_cv,str15,0,0.0011907470704602338
+clean CIFAR-10 test,gap_own_ece,dir_cv,str15,1,-0.0015046824653922684
+clean CIFAR-10 test,gap_own_ece,dir_cv,str15,2,-0.0016794216175950588
+clean CIFAR-10 test,gap_own_ece,dir_cv,str30,0,0.0003856004827050511
+clean CIFAR-10 test,gap_own_ece,dir_cv,str30,1,0.001509654233435044
+clean CIFAR-10 test,gap_own_ece,dir_cv,str30,2,0.0005210532002048254
+clean CIFAR-10 test,gap_own_ece,dir_cv,int8,0,0.0015692045181077263
+clean CIFAR-10 test,gap_own_ece,dir_cv,int8,1,7.733598525003563e-05
+clean CIFAR-10 test,gap_own_ece,dir_cv,int8,2,-0.0004308917160945041
+clean CIFAR-10 test,gap_own_ece,dir_cv,kd,0,-0.00035869064356144724
+clean CIFAR-10 test,gap_own_ece,dir_cv,kd,1,-0.001978398149132381
+clean CIFAR-10 test,gap_own_ece,dir_cv,kd,2,-0.00046115115528737836
+clean CIFAR-10 test,gap_own_ece,dir_cv,scratch,0,-0.0007197899804240746
+clean CIFAR-10 test,gap_own_ece,dir_cv,scratch,1,-0.0019184774175695588
+clean CIFAR-10 test,gap_own_ece,dir_cv,scratch,2,-0.0004918700001544296
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,dense,0,0.12564282830882068
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,dense,1,0.11161605079279338
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,dense,2,0.12977428277840214
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,denseft,0,0.13454203704653178
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,denseft,1,0.11632483386937774
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,denseft,2,0.12987040022917584
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr30,0,0.12022235371434685
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr30,1,0.1233377364921768
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr30,2,0.12956781358261898
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr50,0,0.12331508175126707
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr50,1,0.1222032444709539
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr50,2,0.12932301031861698
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr70,0,0.12537838669977583
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr70,1,0.12254938656067843
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr70,2,0.12629367689671114
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr90,0,0.12783158865567043
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr90,1,0.11762485152786965
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,unstr90,2,0.1375721471683184
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,str15,0,0.12368089143451051
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,str15,1,0.12396052193566158
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,str15,2,0.12762219929865992
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,str30,0,0.1260651007529894
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,str30,1,0.11899009351599212
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,str30,2,0.13205370559974508
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,int8,0,0.12663892861660317
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,int8,1,0.11265002446776624
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,int8,2,0.13179069974656898
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,kd,0,0.12238023579372959
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,kd,1,0.1333208822462757
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,kd,2,0.12864840793806312
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,scratch,0,0.1038260010164777
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,scratch,1,0.10546465424694615
+CIFAR-10-C (mean of 75 conditions),src_full_ece,ts,scratch,2,0.10046922258522109
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,dense,0,0.1308022397935363
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,dense,1,0.11799266788264315
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,dense,2,0.13446509112078334
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,denseft,0,0.13710828972617303
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,denseft,1,0.12147620314823375
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,denseft,2,0.1370327182220418
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr30,0,0.12634446508066222
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr30,1,0.12680527873191905
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr30,2,0.13491592720325807
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr50,0,0.1275205409580547
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr50,1,0.12836974346525185
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr50,2,0.13519602209913076
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr70,0,0.12864076383589676
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr70,1,0.12674518641061952
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr70,2,0.12959945884579566
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr90,0,0.13509051653557277
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr90,1,0.12120446845525597
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,unstr90,2,0.14602243830598488
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,str15,0,0.12606878829606163
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,str15,1,0.12710312937888404
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,str15,2,0.13224341208890064
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,str30,0,0.13052971663035004
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,str30,1,0.12239407881261667
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,str30,2,0.13540776178669145
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,int8,0,0.13154667738611078
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,int8,1,0.11824840558694037
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,int8,2,0.13622594560659743
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,kd,0,0.12330341466580452
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,kd,1,0.1334743025075194
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,kd,2,0.12338440003163122
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,scratch,0,0.10228645504827912
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,scratch,1,0.11108490488046348
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir,scratch,2,0.10292212833471187
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,dense,0,0.13066441961130365
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,dense,1,0.1179943764207343
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,dense,2,0.1344650911207834
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,denseft,0,0.13585654688133134
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,denseft,1,0.12082175981360929
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,denseft,2,0.13703271822204185
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr30,0,0.126389697915965
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr30,1,0.1268052787319191
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr30,2,0.13491592720325812
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr50,0,0.12752054095805476
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr50,1,0.12836974346525187
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr50,2,0.13517208197084857
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr70,0,0.1286407638358968
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr70,1,0.12674518641061955
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr70,2,0.1295994588457957
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr90,0,0.13505533086587676
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr90,1,0.121204468455256
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,unstr90,2,0.1456844248930533
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,str15,0,0.1260687882960617
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,str15,1,0.12710312937888407
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,str15,2,0.13250837084562628
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,str30,0,0.13052971663035007
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,str30,1,0.12239407881261673
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,str30,2,0.1354077617866915
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,int8,0,0.13106223927549263
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,int8,1,0.11844414454584878
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,int8,2,0.13622594560659748
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,kd,0,0.12330341466580456
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,kd,1,0.1352091365167726
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,kd,2,0.12314861491976299
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,scratch,0,0.10139620932821483
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,scratch,1,0.1111539399620736
+CIFAR-10-C (mean of 75 conditions),src_full_ece,dir_cv,scratch,2,0.10234079799861667
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,dense,0,0.9852057369550069
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,dense,1,0.92497163494428
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,dense,2,1.018361059029897
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,denseft,0,1.0290815915664038
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,denseft,1,0.932856410741806
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,denseft,2,1.0151807675758997
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr30,0,0.9377324026823044
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr30,1,0.9756340648730596
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr30,2,1.004387301603953
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr50,0,0.9577133657534918
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr50,1,0.9589663767814636
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr50,2,1.0003548125425974
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr70,0,0.9827549976110458
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr70,1,0.9759316639105479
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr70,2,0.9910032739241917
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr90,0,0.9809768873453141
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr90,1,0.9706480421622594
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,unstr90,2,1.043035241762797
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,str15,0,0.9615561801195145
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,str15,1,0.971367325981458
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,str15,2,0.9925185283025105
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,str30,0,0.9821860033273697
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,str30,1,0.9606802648305893
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,str30,2,1.0344046771526336
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,int8,0,0.9887000721693039
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,int8,1,0.9376219536860784
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,int8,2,1.0337274450063705
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,kd,0,0.9958305754264196
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,kd,1,1.0653207196791967
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,kd,2,1.0293991603453954
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,scratch,0,1.031785257657369
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,scratch,1,1.0107015401124955
+CIFAR-10-C (mean of 75 conditions),src_full_nll,ts,scratch,2,0.9972167656819025
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,dense,0,1.0373357078898051
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,dense,1,0.9877929027410166
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,dense,2,1.1072898265785287
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,denseft,0,1.1016307060593358
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,denseft,1,1.0058500307762193
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,denseft,2,1.1233972646465136
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr30,0,0.9879509785263801
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr30,1,1.032955757357283
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr30,2,1.107090535473584
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr50,0,1.0097406156236721
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr50,1,1.020361791152644
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr50,2,1.0937061887173465
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr70,0,1.0379175195857124
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr70,1,1.0246683758543127
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr70,2,1.053391696434764
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr90,0,1.0571089534278135
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr90,1,1.0253275856238309
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,unstr90,2,1.1800333745135898
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,str15,0,0.9895302575397755
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,str15,1,1.0307731053033142
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,str15,2,1.0874084031930238
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,str30,0,1.0736717349532228
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,str30,1,1.0007939422763752
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,str30,2,1.1121101992760973
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,int8,0,1.0414953861232272
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,int8,1,0.9979765546678137
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,int8,2,1.127270059722043
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,kd,0,1.0176644557066683
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,kd,1,1.101812565005693
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,kd,2,1.0203098098835048
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,scratch,0,1.0743005882841115
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,scratch,1,1.0547041911233839
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir,scratch,2,1.0263981217554197
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,dense,0,1.0383979758904234
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,dense,1,0.9879311488450462
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,dense,2,1.1072898265785287
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,denseft,0,1.0994822562378408
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,denseft,1,1.0079850439429283
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,denseft,2,1.1233972646465136
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr30,0,0.9912441083622354
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr30,1,1.032955757357283
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr30,2,1.107090535473584
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr50,0,1.0097406156236721
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr50,1,1.020361791152644
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr50,2,1.095035702596638
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr70,0,1.0379175195857124
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr70,1,1.0246683758543127
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr70,2,1.053391696434764
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr90,0,1.056720928082448
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr90,1,1.025327585623831
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,unstr90,2,1.1799617731547638
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,str15,0,0.9895302575397755
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,str15,1,1.0307731053033145
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,str15,2,1.087806314025918
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,str30,0,1.0736717349532228
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,str30,1,1.0007939422763752
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,str30,2,1.1121101992760973
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,int8,0,1.0421195861168933
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,int8,1,0.9982445705709059
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,int8,2,1.127270059722043
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,kd,0,1.0176644557066683
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,kd,1,1.1055692349317587
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,kd,2,1.0179588682986305
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,scratch,0,1.072246832664481
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,scratch,1,1.0545005062327304
+CIFAR-10-C (mean of 75 conditions),src_full_nll,dir_cv,scratch,2,1.0245110824137513
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,dense,0,0.735492
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,dense,1,0.7390786666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,dense,2,0.7265946666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,denseft,0,0.727576
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,denseft,1,0.7393626666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,denseft,2,0.7230920000000001
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr30,0,0.7417826666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr30,1,0.734248
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr30,2,0.7293546666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr50,0,0.73752
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr50,1,0.732332
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr50,2,0.730044
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr70,0,0.7349666666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr70,1,0.7328306666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr70,2,0.73018
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr90,0,0.7329706666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr90,1,0.7300386666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,unstr90,2,0.7219853333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,str15,0,0.734768
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,str15,1,0.7335386666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,str15,2,0.727692
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,str30,0,0.730628
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,str30,1,0.7327666666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,str30,2,0.720128
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,int8,0,0.734324
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,int8,1,0.7351679999999999
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,int8,2,0.7229506666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,kd,0,0.7264586666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,kd,1,0.7157066666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,kd,2,0.7189173333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,scratch,0,0.6997506666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,scratch,1,0.7047626666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,ts,scratch,2,0.708868
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,dense,0,0.7350493333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,dense,1,0.7359533333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,dense,2,0.7261000000000001
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,denseft,0,0.7288293333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,denseft,1,0.736616
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,denseft,2,0.7209226666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr30,0,0.7416546666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr30,1,0.7325506666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr30,2,0.7274160000000001
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr50,0,0.7366306666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr50,1,0.7297453333333334
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr50,2,0.7283773333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr70,0,0.7348466666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr70,1,0.730612
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr70,2,0.7303293333333334
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr90,0,0.7319666666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr90,1,0.7286373333333334
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,unstr90,2,0.7176706666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,str15,0,0.73534
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,str15,1,0.7326013333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,str15,2,0.7254146666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,str30,0,0.7303226666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,str30,1,0.7318546666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,str30,2,0.7188680000000001
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,int8,0,0.7346226666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,int8,1,0.7328586666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,int8,2,0.7232733333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,kd,0,0.7276586666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,kd,1,0.7165413333333334
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,kd,2,0.725352
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,scratch,0,0.7016186666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,scratch,1,0.7063106666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir,scratch,2,0.7110533333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,dense,0,0.7349733333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,dense,1,0.73612
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,dense,2,0.7261000000000001
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,denseft,0,0.7291213333333334
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,denseft,1,0.7367186666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,denseft,2,0.7209226666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr30,0,0.7411226666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr30,1,0.7325506666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr30,2,0.7274160000000001
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr50,0,0.7366306666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr50,1,0.7297453333333334
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr50,2,0.7278853333333334
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr70,0,0.7348466666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr70,1,0.730612
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr70,2,0.7303293333333334
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr90,0,0.7321746666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr90,1,0.7286373333333334
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,unstr90,2,0.7179986666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,str15,0,0.73534
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,str15,1,0.7326013333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,str15,2,0.7254493333333334
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,str30,0,0.7303226666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,str30,1,0.7318546666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,str30,2,0.7188680000000001
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,int8,0,0.7348413333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,int8,1,0.7328893333333334
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,int8,2,0.7232733333333333
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,kd,0,0.7276586666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,kd,1,0.715232
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,kd,2,0.7256586666666667
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,scratch,0,0.702172
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,scratch,1,0.7065146666666666
+CIFAR-10-C (mean of 75 conditions),accuracy_src_full,dir_cv,scratch,2,0.7116399999999999
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,dense,0,0.10074480006054586
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,dense,1,0.08838873449874037
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,dense,2,0.10554915023009862
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,denseft,0,0.10881801369915463
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,denseft,1,0.09180060348810098
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,denseft,2,0.10524983607055456
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr30,0,0.09449294280301827
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr30,1,0.09829549731566288
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr30,2,0.10417914179687547
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr50,0,0.09701022309593904
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr50,1,0.09626388067306756
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr50,2,0.10322458021285337
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr70,0,0.10013859417036522
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr70,1,0.0983760423852706
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr70,2,0.10031883548089965
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr90,0,0.10259293377462547
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr90,1,0.09579455286276674
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,unstr90,2,0.11314394886693722
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,str15,0,0.09811816027277045
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,str15,1,0.09992654038551116
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,str15,2,0.10182039511971097
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,str30,0,0.1006546685702397
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,str30,1,0.09613700156426236
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,str30,2,0.10768859729096543
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,int8,0,0.10125636960434546
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,int8,1,0.08896780271867424
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,int8,2,0.10765635146254245
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,kd,0,0.09890556232668202
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,kd,1,0.10937674154400277
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,kd,2,0.10497220401469713
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,scratch,0,0.08505048031363453
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,scratch,1,0.08672514074522422
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,ts,scratch,2,0.08194008621271322
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,dense,0,0.11695451832369214
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,dense,1,0.1055283826267641
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,dense,2,0.12132267699482036
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,denseft,0,0.12235135244450283
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,denseft,1,0.10882273949393977
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,denseft,2,0.1226694030486567
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr30,0,0.11212477558410422
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr30,1,0.11288518571564397
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr30,2,0.12098804017798469
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr50,0,0.11249992453353279
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr50,1,0.11509300705616204
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr50,2,0.12183359921946338
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr70,0,0.11428448303220691
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr70,1,0.11383494068044954
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr70,2,0.11560265123107889
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr90,0,0.12088256498099599
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr90,1,0.10871732119576509
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,unstr90,2,0.1325001797359323
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,str15,0,0.11232100886688151
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,str15,1,0.11389378540505112
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,str15,2,0.11879888475552597
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,str30,0,0.11648974060115731
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,str30,1,0.10947079407071382
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,str30,2,0.12149006677256141
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,int8,0,0.11748182346030506
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,int8,1,0.10565263319959436
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,int8,2,0.12338636230872956
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,kd,0,0.11068334200102697
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,kd,1,0.12116064429095225
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,kd,2,0.11128960329070975
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,scratch,0,0.09271831683798268
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,scratch,1,0.1012172968513506
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir,scratch,2,0.09372005313648307
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,dense,0,0.11732228989997755
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,dense,1,0.10492899097670416
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,dense,2,0.12132267699482038
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,denseft,0,0.12167964124515672
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,denseft,1,0.10864340593905683
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,denseft,2,0.12266940304865676
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr30,0,0.11277588347023176
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr30,1,0.11288518571564403
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr30,2,0.12098804017798474
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr50,0,0.11249992453353284
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr50,1,0.1150930070561621
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr50,2,0.12248630680876414
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr70,0,0.11428448303220695
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr70,1,0.11383494068044958
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr70,2,0.11560265123107892
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr90,0,0.12003698057632754
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr90,1,0.10871732119576512
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,unstr90,2,0.13148582812601728
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,str15,0,0.11232100886688154
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,str15,1,0.11389378540505116
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,str15,2,0.11842807829137764
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,str30,0,0.11648974060115734
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,str30,1,0.10947079407071385
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,str30,2,0.12149006677256147
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,int8,0,0.11755585144887803
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,int8,1,0.1054263234155868
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,int8,2,0.12338636230872957
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,kd,0,0.11068334200102702
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,kd,1,0.12334306494795491
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,kd,2,0.11184432873619232
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,scratch,0,0.09169768142794883
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,scratch,1,0.1008445358933577
+CIFAR-10-C (mean of 75 conditions),gap_own_ece,dir_cv,scratch,2,0.09273586692325572
+STL-9,src_full_ece,ts,dense,0,0.0711237902484006
+STL-9,src_full_ece,ts,dense,1,0.0702010518809159
+STL-9,src_full_ece,ts,dense,2,0.0755242093155781
+STL-9,src_full_ece,ts,denseft,0,0.0769948779832985
+STL-9,src_full_ece,ts,denseft,1,0.0715349197491175
+STL-9,src_full_ece,ts,denseft,2,0.0738943230795363
+STL-9,src_full_ece,ts,unstr30,0,0.0724882897713945
+STL-9,src_full_ece,ts,unstr30,1,0.0741760751749906
+STL-9,src_full_ece,ts,unstr30,2,0.0744877156449689
+STL-9,src_full_ece,ts,unstr50,0,0.0700642411534985
+STL-9,src_full_ece,ts,unstr50,1,0.0734648274837269
+STL-9,src_full_ece,ts,unstr50,2,0.076882323709627
+STL-9,src_full_ece,ts,unstr70,0,0.0685799140483141
+STL-9,src_full_ece,ts,unstr70,1,0.074313832550413
+STL-9,src_full_ece,ts,unstr70,2,0.0702068592711455
+STL-9,src_full_ece,ts,unstr90,0,0.068947241925117
+STL-9,src_full_ece,ts,unstr90,1,0.0667278718658619
+STL-9,src_full_ece,ts,unstr90,2,0.0692063239196108
+STL-9,src_full_ece,ts,str15,0,0.0739196827055679
+STL-9,src_full_ece,ts,str15,1,0.0731520897770921
+STL-9,src_full_ece,ts,str15,2,0.0694774692898823
+STL-9,src_full_ece,ts,str30,0,0.0701924441858298
+STL-9,src_full_ece,ts,str30,1,0.0701064658785859
+STL-9,src_full_ece,ts,str30,2,0.075142183697058
+STL-9,src_full_ece,ts,int8,0,0.0721386212462352
+STL-9,src_full_ece,ts,int8,1,0.072351087031679
+STL-9,src_full_ece,ts,int8,2,0.0768049796877636
+STL-9,src_full_ece,ts,kd,0,0.0675958025289906
+STL-9,src_full_ece,ts,kd,1,0.0697791575247214
+STL-9,src_full_ece,ts,kd,2,0.0674249655256668
+STL-9,src_full_ece,ts,scratch,0,0.0561194096381465
+STL-9,src_full_ece,ts,scratch,1,0.0501369726533691
+STL-9,src_full_ece,ts,scratch,2,0.0551678700269096
+STL-9,src_full_ece,dir,dense,0,0.0743378505580427
+STL-9,src_full_ece,dir,dense,1,0.072318589122033
+STL-9,src_full_ece,dir,dense,2,0.0794400795254427
+STL-9,src_full_ece,dir,denseft,0,0.0799078358839757
+STL-9,src_full_ece,dir,denseft,1,0.076285010882421
+STL-9,src_full_ece,dir,denseft,2,0.0754352612822395
+STL-9,src_full_ece,dir,unstr30,0,0.0760180329424093
+STL-9,src_full_ece,dir,unstr30,1,0.0755714602098128
+STL-9,src_full_ece,dir,unstr30,2,0.0778088758652088
+STL-9,src_full_ece,dir,unstr50,0,0.0713533364058343
+STL-9,src_full_ece,dir,unstr50,1,0.0769888873955665
+STL-9,src_full_ece,dir,unstr50,2,0.0779513958280807
+STL-9,src_full_ece,dir,unstr70,0,0.074504226656293
+STL-9,src_full_ece,dir,unstr70,1,0.0783345851393362
+STL-9,src_full_ece,dir,unstr70,2,0.0756760825807281
+STL-9,src_full_ece,dir,unstr90,0,0.0785716836383531
+STL-9,src_full_ece,dir,unstr90,1,0.0668439107733618
+STL-9,src_full_ece,dir,unstr90,2,0.0747872268673139
+STL-9,src_full_ece,dir,str15,0,0.0762167775485591
+STL-9,src_full_ece,dir,str15,1,0.0758294840564899
+STL-9,src_full_ece,dir,str15,2,0.0753677329934585
+STL-9,src_full_ece,dir,str30,0,0.076828610721872
+STL-9,src_full_ece,dir,str30,1,0.0700157249093911
+STL-9,src_full_ece,dir,str30,2,0.0770332133521976
+STL-9,src_full_ece,dir,int8,0,0.0754580204201955
+STL-9,src_full_ece,dir,int8,1,0.071878172092879
+STL-9,src_full_ece,dir,int8,2,0.080093531992074
+STL-9,src_full_ece,dir,kd,0,0.0734726919536579
+STL-9,src_full_ece,dir,kd,1,0.0686507332678835
+STL-9,src_full_ece,dir,kd,2,0.0717272362788072
+STL-9,src_full_ece,dir,scratch,0,0.0599619985098356
+STL-9,src_full_ece,dir,scratch,1,0.0575359950455494
+STL-9,src_full_ece,dir,scratch,2,0.0606485116298899
+STL-9,src_full_ece,dir_cv,dense,0,0.07430465341771
+STL-9,src_full_ece,dir_cv,dense,1,0.07331584308840794
+STL-9,src_full_ece,dir_cv,dense,2,0.07944007952544276
+STL-9,src_full_ece,dir_cv,denseft,0,0.07896304733344406
+STL-9,src_full_ece,dir_cv,denseft,1,0.07587968494412302
+STL-9,src_full_ece,dir_cv,denseft,2,0.07543526128223951
+STL-9,src_full_ece,dir_cv,unstr30,0,0.07637950997446044
+STL-9,src_full_ece,dir_cv,unstr30,1,0.07557146020981284
+STL-9,src_full_ece,dir_cv,unstr30,2,0.07780887586520888
+STL-9,src_full_ece,dir_cv,unstr50,0,0.07135333640583438
+STL-9,src_full_ece,dir_cv,unstr50,1,0.07698888739556657
+STL-9,src_full_ece,dir_cv,unstr50,2,0.07813668890976452
+STL-9,src_full_ece,dir_cv,unstr70,0,0.07450422665629308
+STL-9,src_full_ece,dir_cv,unstr70,1,0.07833458513933622
+STL-9,src_full_ece,dir_cv,unstr70,2,0.07567608258072814
+STL-9,src_full_ece,dir_cv,unstr90,0,0.07778022526603896
+STL-9,src_full_ece,dir_cv,unstr90,1,0.06684391077336181
+STL-9,src_full_ece,dir_cv,unstr90,2,0.07439906940723413
+STL-9,src_full_ece,dir_cv,str15,0,0.0762167775485591
+STL-9,src_full_ece,dir_cv,str15,1,0.07582948405648995
+STL-9,src_full_ece,dir_cv,str15,2,0.07441172568431705
+STL-9,src_full_ece,dir_cv,str30,0,0.07682861072187203
+STL-9,src_full_ece,dir_cv,str30,1,0.07001572490939115
+STL-9,src_full_ece,dir_cv,str30,2,0.07703321335219762
+STL-9,src_full_ece,dir_cv,int8,0,0.07530749531462745
+STL-9,src_full_ece,dir_cv,int8,1,0.07167324133874153
+STL-9,src_full_ece,dir_cv,int8,2,0.08009353199207404
+STL-9,src_full_ece,dir_cv,kd,0,0.07347269195365794
+STL-9,src_full_ece,dir_cv,kd,1,0.06885935393241316
+STL-9,src_full_ece,dir_cv,kd,2,0.07182363861258984
+STL-9,src_full_ece,dir_cv,scratch,0,0.060059804543197814
+STL-9,src_full_ece,dir_cv,scratch,1,0.05684042402940467
+STL-9,src_full_ece,dir_cv,scratch,2,0.05856317466886492
+STL-9,src_full_nll,ts,dense,0,0.5896179676055908
+STL-9,src_full_nll,ts,dense,1,0.6047053933143616
+STL-9,src_full_nll,ts,dense,2,0.6000530123710632
+STL-9,src_full_nll,ts,denseft,0,0.6120926737785339
+STL-9,src_full_nll,ts,denseft,1,0.6100560426712036
+STL-9,src_full_nll,ts,denseft,2,0.5951632857322693
+STL-9,src_full_nll,ts,unstr30,0,0.5852529406547546
+STL-9,src_full_nll,ts,unstr30,1,0.6177573800086975
+STL-9,src_full_nll,ts,unstr30,2,0.5942842364311218
+STL-9,src_full_nll,ts,unstr50,0,0.5742728114128113
+STL-9,src_full_nll,ts,unstr50,1,0.6155219078063965
+STL-9,src_full_nll,ts,unstr50,2,0.5970860719680786
+STL-9,src_full_nll,ts,unstr70,0,0.5857895016670227
+STL-9,src_full_nll,ts,unstr70,1,0.6086507439613342
+STL-9,src_full_nll,ts,unstr70,2,0.611637532711029
+STL-9,src_full_nll,ts,unstr90,0,0.5875951051712036
+STL-9,src_full_nll,ts,unstr90,1,0.6034925580024719
+STL-9,src_full_nll,ts,unstr90,2,0.583078145980835
+STL-9,src_full_nll,ts,str15,0,0.592632532119751
+STL-9,src_full_nll,ts,str15,1,0.621538519859314
+STL-9,src_full_nll,ts,str15,2,0.5952825546264648
+STL-9,src_full_nll,ts,str30,0,0.5920970439910889
+STL-9,src_full_nll,ts,str30,1,0.5988403558731079
+STL-9,src_full_nll,ts,str30,2,0.6121310591697693
+STL-9,src_full_nll,ts,int8,0,0.5967926979064941
+STL-9,src_full_nll,ts,int8,1,0.6063196063041687
+STL-9,src_full_nll,ts,int8,2,0.6077117919921875
+STL-9,src_full_nll,ts,kd,0,0.5899831652641296
+STL-9,src_full_nll,ts,kd,1,0.5892492532730103
+STL-9,src_full_nll,ts,kd,2,0.580748438835144
+STL-9,src_full_nll,ts,scratch,0,0.5859847068786621
+STL-9,src_full_nll,ts,scratch,1,0.580920398235321
+STL-9,src_full_nll,ts,scratch,2,0.582068145275116
+STL-9,src_full_nll,dir,dense,0,0.5744008458241908
+STL-9,src_full_nll,dir,dense,1,0.590616846956514
+STL-9,src_full_nll,dir,dense,2,0.5900796435884379
+STL-9,src_full_nll,dir,denseft,0,0.5904437011608414
+STL-9,src_full_nll,dir,denseft,1,0.5898751227789927
+STL-9,src_full_nll,dir,denseft,2,0.5679230086326267
+STL-9,src_full_nll,dir,unstr30,0,0.5780694048858273
+STL-9,src_full_nll,dir,unstr30,1,0.5966903863746431
+STL-9,src_full_nll,dir,unstr30,2,0.579105846139588
+STL-9,src_full_nll,dir,unstr50,0,0.5601851118810214
+STL-9,src_full_nll,dir,unstr50,1,0.5925859987392613
+STL-9,src_full_nll,dir,unstr50,2,0.5887132014323615
+STL-9,src_full_nll,dir,unstr70,0,0.5657776473965376
+STL-9,src_full_nll,dir,unstr70,1,0.591314846343045
+STL-9,src_full_nll,dir,unstr70,2,0.5908358643066608
+STL-9,src_full_nll,dir,unstr90,0,0.591961063832281
+STL-9,src_full_nll,dir,unstr90,1,0.5828500088099127
+STL-9,src_full_nll,dir,unstr90,2,0.5703889333125433
+STL-9,src_full_nll,dir,str15,0,0.5784722312934928
+STL-9,src_full_nll,dir,str15,1,0.617806613660178
+STL-9,src_full_nll,dir,str15,2,0.5840766740992053
+STL-9,src_full_nll,dir,str30,0,0.5840410377527072
+STL-9,src_full_nll,dir,str30,1,0.5777665979017532
+STL-9,src_full_nll,dir,str30,2,0.5919901673133614
+STL-9,src_full_nll,dir,int8,0,0.5815691633772267
+STL-9,src_full_nll,dir,int8,1,0.5908707476955253
+STL-9,src_full_nll,dir,int8,2,0.5973886738372579
+STL-9,src_full_nll,dir,kd,0,0.5740413656544184
+STL-9,src_full_nll,dir,kd,1,0.5646288095599491
+STL-9,src_full_nll,dir,kd,2,0.5782864677642703
+STL-9,src_full_nll,dir,scratch,0,0.5720651512759504
+STL-9,src_full_nll,dir,scratch,1,0.568044853026192
+STL-9,src_full_nll,dir,scratch,2,0.5564233770541803
+STL-9,src_full_nll,dir_cv,dense,0,0.5772403813639542
+STL-9,src_full_nll,dir_cv,dense,1,0.5903680242461239
+STL-9,src_full_nll,dir_cv,dense,2,0.5900796435884379
+STL-9,src_full_nll,dir_cv,denseft,0,0.5905038754149227
+STL-9,src_full_nll,dir_cv,denseft,1,0.5915885704119168
+STL-9,src_full_nll,dir_cv,denseft,2,0.5679230086326267
+STL-9,src_full_nll,dir_cv,unstr30,0,0.580572747050979
+STL-9,src_full_nll,dir_cv,unstr30,1,0.5966903863746431
+STL-9,src_full_nll,dir_cv,unstr30,2,0.579105846139588
+STL-9,src_full_nll,dir_cv,unstr50,0,0.5601851118810214
+STL-9,src_full_nll,dir_cv,unstr50,1,0.5925859987392613
+STL-9,src_full_nll,dir_cv,unstr50,2,0.5902719652156443
+STL-9,src_full_nll,dir_cv,unstr70,0,0.5657776473965376
+STL-9,src_full_nll,dir_cv,unstr70,1,0.591314846343045
+STL-9,src_full_nll,dir_cv,unstr70,2,0.5908358643066608
+STL-9,src_full_nll,dir_cv,unstr90,0,0.5921844715267455
+STL-9,src_full_nll,dir_cv,unstr90,1,0.5828500088099127
+STL-9,src_full_nll,dir_cv,unstr90,2,0.5697680975418611
+STL-9,src_full_nll,dir_cv,str15,0,0.5784722312934928
+STL-9,src_full_nll,dir_cv,str15,1,0.617806613660178
+STL-9,src_full_nll,dir_cv,str15,2,0.584120974690501
+STL-9,src_full_nll,dir_cv,str30,0,0.5840410377527072
+STL-9,src_full_nll,dir_cv,str30,1,0.5777665979017532
+STL-9,src_full_nll,dir_cv,str30,2,0.5919901673133614
+STL-9,src_full_nll,dir_cv,int8,0,0.5840498406071164
+STL-9,src_full_nll,dir_cv,int8,1,0.5906184940262
+STL-9,src_full_nll,dir_cv,int8,2,0.5973886738372579
+STL-9,src_full_nll,dir_cv,kd,0,0.5740413656544184
+STL-9,src_full_nll,dir_cv,kd,1,0.5675882580661828
+STL-9,src_full_nll,dir_cv,kd,2,0.5798674863804029
+STL-9,src_full_nll,dir_cv,scratch,0,0.5712275727194269
+STL-9,src_full_nll,dir_cv,scratch,1,0.5679988482380449
+STL-9,src_full_nll,dir_cv,scratch,2,0.5552434838140591
+STL-9,accuracy_src_full,ts,dense,0,0.8240277777777778
+STL-9,accuracy_src_full,ts,dense,1,0.8191666666666667
+STL-9,accuracy_src_full,ts,dense,2,0.8240277777777778
+STL-9,accuracy_src_full,ts,denseft,0,0.8208333333333333
+STL-9,accuracy_src_full,ts,denseft,1,0.8208333333333333
+STL-9,accuracy_src_full,ts,denseft,2,0.8252777777777778
+STL-9,accuracy_src_full,ts,unstr30,0,0.8273611111111111
+STL-9,accuracy_src_full,ts,unstr30,1,0.8177777777777778
+STL-9,accuracy_src_full,ts,unstr30,2,0.8256944444444444
+STL-9,accuracy_src_full,ts,unstr50,0,0.8263888888888888
+STL-9,accuracy_src_full,ts,unstr50,1,0.81625
+STL-9,accuracy_src_full,ts,unstr50,2,0.8229166666666666
+STL-9,accuracy_src_full,ts,unstr70,0,0.8273611111111111
+STL-9,accuracy_src_full,ts,unstr70,1,0.8169444444444445
+STL-9,accuracy_src_full,ts,unstr70,2,0.8281944444444445
+STL-9,accuracy_src_full,ts,unstr90,0,0.8284722222222223
+STL-9,accuracy_src_full,ts,unstr90,1,0.82
+STL-9,accuracy_src_full,ts,unstr90,2,0.8313888888888888
+STL-9,accuracy_src_full,ts,str15,0,0.82375
+STL-9,accuracy_src_full,ts,str15,1,0.8184722222222223
+STL-9,accuracy_src_full,ts,str15,2,0.8268055555555556
+STL-9,accuracy_src_full,ts,str30,0,0.8241666666666667
+STL-9,accuracy_src_full,ts,str30,1,0.8209722222222222
+STL-9,accuracy_src_full,ts,str30,2,0.8180555555555555
+STL-9,accuracy_src_full,ts,int8,0,0.8208333333333333
+STL-9,accuracy_src_full,ts,int8,1,0.8148611111111111
+STL-9,accuracy_src_full,ts,int8,2,0.8209722222222222
+STL-9,accuracy_src_full,ts,kd,0,0.8227777777777778
+STL-9,accuracy_src_full,ts,kd,1,0.8216666666666667
+STL-9,accuracy_src_full,ts,kd,2,0.8254166666666667
+STL-9,accuracy_src_full,ts,scratch,0,0.8081944444444444
+STL-9,accuracy_src_full,ts,scratch,1,0.8151388888888889
+STL-9,accuracy_src_full,ts,scratch,2,0.8148611111111111
+STL-9,accuracy_src_full,dir,dense,0,0.8243055555555555
+STL-9,accuracy_src_full,dir,dense,1,0.8209722222222222
+STL-9,accuracy_src_full,dir,dense,2,0.8247222222222222
+STL-9,accuracy_src_full,dir,denseft,0,0.8225
+STL-9,accuracy_src_full,dir,denseft,1,0.8201388888888889
+STL-9,accuracy_src_full,dir,denseft,2,0.8273611111111111
+STL-9,accuracy_src_full,dir,unstr30,0,0.8270833333333333
+STL-9,accuracy_src_full,dir,unstr30,1,0.8198611111111112
+STL-9,accuracy_src_full,dir,unstr30,2,0.8265277777777778
+STL-9,accuracy_src_full,dir,unstr50,0,0.8272222222222222
+STL-9,accuracy_src_full,dir,unstr50,1,0.8168055555555556
+STL-9,accuracy_src_full,dir,unstr50,2,0.8266666666666667
+STL-9,accuracy_src_full,dir,unstr70,0,0.8243055555555555
+STL-9,accuracy_src_full,dir,unstr70,1,0.8175
+STL-9,accuracy_src_full,dir,unstr70,2,0.8256944444444444
+STL-9,accuracy_src_full,dir,unstr90,0,0.8234722222222223
+STL-9,accuracy_src_full,dir,unstr90,1,0.8216666666666667
+STL-9,accuracy_src_full,dir,unstr90,2,0.8275
+STL-9,accuracy_src_full,dir,str15,0,0.8234722222222223
+STL-9,accuracy_src_full,dir,str15,1,0.8205555555555556
+STL-9,accuracy_src_full,dir,str15,2,0.8280555555555555
+STL-9,accuracy_src_full,dir,str30,0,0.8215277777777777
+STL-9,accuracy_src_full,dir,str30,1,0.82375
+STL-9,accuracy_src_full,dir,str30,2,0.8197222222222222
+STL-9,accuracy_src_full,dir,int8,0,0.8225
+STL-9,accuracy_src_full,dir,int8,1,0.8194444444444444
+STL-9,accuracy_src_full,dir,int8,2,0.8219444444444445
+STL-9,accuracy_src_full,dir,kd,0,0.82
+STL-9,accuracy_src_full,dir,kd,1,0.8254166666666667
+STL-9,accuracy_src_full,dir,kd,2,0.825
+STL-9,accuracy_src_full,dir,scratch,0,0.8109722222222222
+STL-9,accuracy_src_full,dir,scratch,1,0.8136111111111111
+STL-9,accuracy_src_full,dir,scratch,2,0.8155555555555556
+STL-9,accuracy_src_full,dir_cv,dense,0,0.8240277777777778
+STL-9,accuracy_src_full,dir_cv,dense,1,0.8204166666666667
+STL-9,accuracy_src_full,dir_cv,dense,2,0.8247222222222222
+STL-9,accuracy_src_full,dir_cv,denseft,0,0.8229166666666666
+STL-9,accuracy_src_full,dir_cv,denseft,1,0.8211111111111111
+STL-9,accuracy_src_full,dir_cv,denseft,2,0.8273611111111111
+STL-9,accuracy_src_full,dir_cv,unstr30,0,0.8269444444444445
+STL-9,accuracy_src_full,dir_cv,unstr30,1,0.8198611111111112
+STL-9,accuracy_src_full,dir_cv,unstr30,2,0.8265277777777778
+STL-9,accuracy_src_full,dir_cv,unstr50,0,0.8272222222222222
+STL-9,accuracy_src_full,dir_cv,unstr50,1,0.8168055555555556
+STL-9,accuracy_src_full,dir_cv,unstr50,2,0.8256944444444444
+STL-9,accuracy_src_full,dir_cv,unstr70,0,0.8243055555555555
+STL-9,accuracy_src_full,dir_cv,unstr70,1,0.8175
+STL-9,accuracy_src_full,dir_cv,unstr70,2,0.8256944444444444
+STL-9,accuracy_src_full,dir_cv,unstr90,0,0.82375
+STL-9,accuracy_src_full,dir_cv,unstr90,1,0.8216666666666667
+STL-9,accuracy_src_full,dir_cv,unstr90,2,0.8279166666666666
+STL-9,accuracy_src_full,dir_cv,str15,0,0.8234722222222223
+STL-9,accuracy_src_full,dir_cv,str15,1,0.8205555555555556
+STL-9,accuracy_src_full,dir_cv,str15,2,0.8281944444444445
+STL-9,accuracy_src_full,dir_cv,str30,0,0.8215277777777777
+STL-9,accuracy_src_full,dir_cv,str30,1,0.82375
+STL-9,accuracy_src_full,dir_cv,str30,2,0.8197222222222222
+STL-9,accuracy_src_full,dir_cv,int8,0,0.8222222222222222
+STL-9,accuracy_src_full,dir_cv,int8,1,0.8197222222222222
+STL-9,accuracy_src_full,dir_cv,int8,2,0.8219444444444445
+STL-9,accuracy_src_full,dir_cv,kd,0,0.82
+STL-9,accuracy_src_full,dir_cv,kd,1,0.8254166666666667
+STL-9,accuracy_src_full,dir_cv,kd,2,0.8245833333333333
+STL-9,accuracy_src_full,dir_cv,scratch,0,0.81125
+STL-9,accuracy_src_full,dir_cv,scratch,1,0.8143055555555555
+STL-9,accuracy_src_full,dir_cv,scratch,2,0.8177777777777778
+STL-9,gap_own_ece,ts,dense,0,0.0458412857410134
+STL-9,gap_own_ece,ts,dense,1,0.0466302664763788
+STL-9,gap_own_ece,ts,dense,2,0.0493535701130785
+STL-9,gap_own_ece,ts,denseft,0,0.0441349931066842
+STL-9,gap_own_ece,ts,denseft,1,0.0444772783258673
+STL-9,gap_own_ece,ts,denseft,2,0.0465860297062433
+STL-9,gap_own_ece,ts,unstr30,0,0.0433330895072136
+STL-9,gap_own_ece,ts,unstr30,1,0.0533232432696521
+STL-9,gap_own_ece,ts,unstr30,2,0.0448588702006751
+STL-9,gap_own_ece,ts,unstr50,0,0.0390440317122472
+STL-9,gap_own_ece,ts,unstr50,1,0.0506542137948995
+STL-9,gap_own_ece,ts,unstr50,2,0.0468673246487833
+STL-9,gap_own_ece,ts,unstr70,0,0.0370328874338812
+STL-9,gap_own_ece,ts,unstr70,1,0.0467901628435448
+STL-9,gap_own_ece,ts,unstr70,2,0.0494980871736828
+STL-9,gap_own_ece,ts,unstr90,0,0.0463802939818873
+STL-9,gap_own_ece,ts,unstr90,1,0.0483240101097162
+STL-9,gap_own_ece,ts,unstr90,2,0.0450866812455152
+STL-9,gap_own_ece,ts,str15,0,0.0410990445341159
+STL-9,gap_own_ece,ts,str15,1,0.0524444227122265
+STL-9,gap_own_ece,ts,str15,2,0.0451035336961915
+STL-9,gap_own_ece,ts,str30,0,0.041791940893679
+STL-9,gap_own_ece,ts,str30,1,0.0487126380988421
+STL-9,gap_own_ece,ts,str30,2,0.0479243182619221
+STL-9,gap_own_ece,ts,int8,0,0.0441199362311117
+STL-9,gap_own_ece,ts,int8,1,0.0476090987360894
+STL-9,gap_own_ece,ts,int8,2,0.0507148085190916
+STL-9,gap_own_ece,ts,kd,0,0.0432495276232603
+STL-9,gap_own_ece,ts,kd,1,0.0445242025860537
+STL-9,gap_own_ece,ts,kd,2,0.0465390588176976
+STL-9,gap_own_ece,ts,scratch,0,0.0421707177289893
+STL-9,gap_own_ece,ts,scratch,1,0.0381395442054585
+STL-9,gap_own_ece,ts,scratch,2,0.0412001708513491
+STL-9,gap_own_ece,dir,dense,0,0.0535128914321458
+STL-9,gap_own_ece,dir,dense,1,0.0530833801950224
+STL-9,gap_own_ece,dir,dense,2,0.0581791112464895
+STL-9,gap_own_ece,dir,denseft,0,0.0599481776689154
+STL-9,gap_own_ece,dir,denseft,1,0.0541005053711194
+STL-9,gap_own_ece,dir,denseft,2,0.0515460732275265
+STL-9,gap_own_ece,dir,unstr30,0,0.0565792900337297
+STL-9,gap_own_ece,dir,unstr30,1,0.0554144141995346
+STL-9,gap_own_ece,dir,unstr30,2,0.0540005912583749
+STL-9,gap_own_ece,dir,unstr50,0,0.0457074782481506
+STL-9,gap_own_ece,dir,unstr50,1,0.0556735381958727
+STL-9,gap_own_ece,dir,unstr50,2,0.0586938991186973
+STL-9,gap_own_ece,dir,unstr70,0,0.0537545463060821
+STL-9,gap_own_ece,dir,unstr70,1,0.0529958002792303
+STL-9,gap_own_ece,dir,unstr70,2,0.0580857778130125
+STL-9,gap_own_ece,dir,unstr90,0,0.0596826826335364
+STL-9,gap_own_ece,dir,unstr90,1,0.0448516083748196
+STL-9,gap_own_ece,dir,unstr90,2,0.0578143780571608
+STL-9,gap_own_ece,dir,str15,0,0.0543908062478711
+STL-9,gap_own_ece,dir,str15,1,0.0561776239494212
+STL-9,gap_own_ece,dir,str15,2,0.05169111578139
+STL-9,gap_own_ece,dir,str30,0,0.051999796354109
+STL-9,gap_own_ece,dir,str30,1,0.0551191880393101
+STL-9,gap_own_ece,dir,str30,2,0.0553755322112543
+STL-9,gap_own_ece,dir,int8,0,0.0537808185179498
+STL-9,gap_own_ece,dir,int8,1,0.0528320496060826
+STL-9,gap_own_ece,dir,int8,2,0.0584489720130101
+STL-9,gap_own_ece,dir,kd,0,0.0524908909229703
+STL-9,gap_own_ece,dir,kd,1,0.05185050747443
+STL-9,gap_own_ece,dir,kd,2,0.0512375151351649
+STL-9,gap_own_ece,dir,scratch,0,0.0481945842648922
+STL-9,gap_own_ece,dir,scratch,1,0.0457638677090765
+STL-9,gap_own_ece,dir,scratch,2,0.0518004221033413
+STL-9,gap_own_ece,dir_cv,dense,0,0.05515346652041665
+STL-9,gap_own_ece,dir_cv,dense,1,0.05179529816670449
+STL-9,gap_own_ece,dir_cv,dense,2,0.058179111246489584
+STL-9,gap_own_ece,dir_cv,denseft,0,0.060411512580296874
+STL-9,gap_own_ece,dir_cv,denseft,1,0.05467259375376876
+STL-9,gap_own_ece,dir_cv,denseft,2,0.05154607322752656
+STL-9,gap_own_ece,dir_cv,unstr30,0,0.05863684616729291
+STL-9,gap_own_ece,dir_cv,unstr30,1,0.05541441419953462
+STL-9,gap_own_ece,dir_cv,unstr30,2,0.05400059125837496
+STL-9,gap_own_ece,dir_cv,unstr50,0,0.0457074782481506
+STL-9,gap_own_ece,dir_cv,unstr50,1,0.05567353819587272
+STL-9,gap_own_ece,dir_cv,unstr50,2,0.059283575994506975
+STL-9,gap_own_ece,dir_cv,unstr70,0,0.05375454630608211
+STL-9,gap_own_ece,dir_cv,unstr70,1,0.05299580027923031
+STL-9,gap_own_ece,dir_cv,unstr70,2,0.058085777813012586
+STL-9,gap_own_ece,dir_cv,unstr90,0,0.05892982135122628
+STL-9,gap_own_ece,dir_cv,unstr90,1,0.04485160837481962
+STL-9,gap_own_ece,dir_cv,unstr90,2,0.05581764127685674
+STL-9,gap_own_ece,dir_cv,str15,0,0.0543908062478711
+STL-9,gap_own_ece,dir_cv,str15,1,0.056177623949421204
+STL-9,gap_own_ece,dir_cv,str15,2,0.04979300452825716
+STL-9,gap_own_ece,dir_cv,str30,0,0.05199979635410903
+STL-9,gap_own_ece,dir_cv,str30,1,0.05511918803931011
+STL-9,gap_own_ece,dir_cv,str30,2,0.055375532211254325
+STL-9,gap_own_ece,dir_cv,int8,0,0.05517055768933471
+STL-9,gap_own_ece,dir_cv,int8,1,0.05110065496693308
+STL-9,gap_own_ece,dir_cv,int8,2,0.05844897201301018
+STL-9,gap_own_ece,dir_cv,kd,0,0.05249089092297033
+STL-9,gap_own_ece,dir_cv,kd,1,0.0515925055927845
+STL-9,gap_own_ece,dir_cv,kd,2,0.05212646859414633
+STL-9,gap_own_ece,dir_cv,scratch,0,0.046110148522720475
+STL-9,gap_own_ece,dir_cv,scratch,1,0.04471422483645601
+STL-9,gap_own_ece,dir_cv,scratch,2,0.04734606735988056
